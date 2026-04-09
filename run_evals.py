@@ -3,7 +3,7 @@ import os
 
 providers = ['aws', 'azure', 'gcp', 'oracle']
 
-openrouter_key = os.environ.get("OPENROUTER_API_KEY", "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")
+openrouter_key = os.environ.get("OPENROUTER_API_KEY", "input secret key here")
 os.environ["OPENROUTER_API_KEY"] = openrouter_key
 
 for provider in providers:
