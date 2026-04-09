@@ -1,0 +1,8 @@
+terraform_code,assert_rubric
+file://terragoat/terraform/gcp/big_data.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/gcp/gcs.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/gcp/gke.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/gcp/instances.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/gcp/networks.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/gcp/provider.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/gcp/variables.tf,Must identify the primary security misconfigurations

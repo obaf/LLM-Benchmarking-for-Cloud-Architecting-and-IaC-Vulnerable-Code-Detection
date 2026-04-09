@@ -1,0 +1,1129 @@
+{
+  "evalId": "eval-xKP-2026-04-08T19:01:02",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-04-08T19:01:02.811Z",
+    "prompts": [
+      {
+        "id": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "provider": "openrouter:openai/gpt-5.4-mini",
+        "metrics": {
+          "score": 5,
+          "testPassCount": 5,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 167,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 1607,
+            "total": 1607,
+            "numRequests": 5,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "provider": "openrouter:google/gemini-3-flash-preview",
+        "metrics": {
+          "score": 5,
+          "testPassCount": 5,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 162,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 2690,
+            "total": 2690,
+            "numRequests": 5,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "provider": "openrouter:deepseek/deepseek-chat-v3.1",
+        "metrics": {
+          "score": 5,
+          "testPassCount": 5,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 170,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 1667,
+            "total": 1667,
+            "numRequests": 5,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "1bae733b-72d6-455a-81ce-a5d7b6124e98",
+        "latencyMs": 35,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"oci_objectstorage_bucket\" \"secretsquirrel\" {\n  # bucket can't emit object events\n  # Storage hasn't versioning enabled\n  # Storage isn't encrypted with Customer Managed Key\n  # Object Storage is Public\"\n  compartment_id        = oci_identity_compartment.tf-compartment.id\n  name                  = \"myreallysecretstore\"\n  namespace             = data.oci_objectstorage_namespace.example.namespace\n  object_events_enabled = false\n  access_type           = \"ObjectRead\"\n  metadata              = { \"data\" = \"Blockofdata\" }\n  storage_tier          = \"Standard\"\n  freeform_tags = {\n    git_commit           = \"7a7b957091945f77ecef712a92ac719c8d9a6498\"\n    git_file             = \"terraform/oracle/bucket.tf\"\n    git_last_modified_at = \"2022-04-06 10:43:57\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"a854aa89-5141-4518-a5dc-0ffe3075f209\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues I see:\n\n- **Public object access enabled**: `access_type = \"ObjectRead\"` makes the bucket publicly readable.\n- **No encryption with customer-managed key**: comment indicates it is **not** using a CMK; secrets should be encrypted with a managed KMS key.\n- **No object versioning**: comment indicates versioning is disabled, increasing risk of data loss/rollback issues.\n- **Object events disabled**: `object_events_enabled = false` reduces visibility and alerting on object changes.\n- **Sensitive metadata / naming exposure**: bucket name `myreallysecretstore` and metadata values may leak purpose/data sensitivity.\n- **Potential secrets in tags/metadata**: tags expose internal repo, commit, author info; not a direct vuln, but useful for attackers for recon.\n\nMain concern: this bucket is configured as **publicly readable** while apparently intended to store secrets.",
+          "tokenUsage": {
+            "cached": 498,
+            "total": 498
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "1d00eb1f-26bb-48a1-9dcf-d3764ee64b00",
+        "latencyMs": 42,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"oci_objectstorage_bucket\" \"secretsquirrel\" {\n  # bucket can't emit object events\n  # Storage hasn't versioning enabled\n  # Storage isn't encrypted with Customer Managed Key\n  # Object Storage is Public\"\n  compartment_id        = oci_identity_compartment.tf-compartment.id\n  name                  = \"myreallysecretstore\"\n  namespace             = data.oci_objectstorage_namespace.example.namespace\n  object_events_enabled = false\n  access_type           = \"ObjectRead\"\n  metadata              = { \"data\" = \"Blockofdata\" }\n  storage_tier          = \"Standard\"\n  freeform_tags = {\n    git_commit           = \"7a7b957091945f77ecef712a92ac719c8d9a6498\"\n    git_file             = \"terraform/oracle/bucket.tf\"\n    git_last_modified_at = \"2022-04-06 10:43:57\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"a854aa89-5141-4518-a5dc-0ffe3075f209\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have identified the following security vulnerabilities and misconfigurations in your OCI Object Storage bucket definition:\n\n1.  **Public Exposure (`access_type = \"ObjectRead\"`)**: The bucket is configured for public read access. This allows anyone on the internet to read objects without authentication. It should be set to `NoPublicAccess`.\n2.  **Lack of Encryption at Rest (Missing `kms_key_id`)**: The bucket uses Oracle-managed keys by default. For sensitive data (\"myreallysecretstore\"), you should use a **Customer Managed Key (CMK)** via the OCI Vault service to maintain control over rotation and access policies.\n3.  **Versioning Disabled (Default)**: Versioning is not explicitly enabled. Without it, data can be permanently lost or corrupted through accidental or malicious overwrites and deletions.\n4.  **Object Events Disabled (`object_events_enabled = false`)**: Disabling events prevents integration with OCI Events and Functions. This hinders real-time security monitoring, automated threat response, and audit logging for object-level changes.\n5.  **Sensitive Information in Tags/Metadata**: \n    *   The `metadata` block contains a hardcoded string `\"Blockofdata\"`. \n    *   The `freeform_tags` expose internal metadata (Git history, user emails, and file paths), which provides an attacker with reconnaissance data regarding your CI/CD pipeline and internal structure.\n6.  **Missing Retention Policy**: There is no defined retention rule, increasing the risk of premature data deletion or non-compliance with data preservation requirements.",
+          "tokenUsage": {
+            "cached": 717,
+            "total": 717
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "9b7b6ebf-cb82-4086-b6fe-c319c45a17bc",
+        "latencyMs": 45,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"oci_objectstorage_bucket\" \"secretsquirrel\" {\n  # bucket can't emit object events\n  # Storage hasn't versioning enabled\n  # Storage isn't encrypted with Customer Managed Key\n  # Object Storage is Public\"\n  compartment_id        = oci_identity_compartment.tf-compartment.id\n  name                  = \"myreallysecretstore\"\n  namespace             = data.oci_objectstorage_namespace.example.namespace\n  object_events_enabled = false\n  access_type           = \"ObjectRead\"\n  metadata              = { \"data\" = \"Blockofdata\" }\n  storage_tier          = \"Standard\"\n  freeform_tags = {\n    git_commit           = \"7a7b957091945f77ecef712a92ac719c8d9a6498\"\n    git_file             = \"terraform/oracle/bucket.tf\"\n    git_last_modified_at = \"2022-04-06 10:43:57\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"a854aa89-5141-4518-a5dc-0ffe3075f209\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "Here are the security vulnerabilities in this Terraform code:\n\n1. **Public Access**: `access_type = \"ObjectRead\"` makes the bucket publicly readable. This is critical for sensitive data.\n\n2. **No Versioning**: The code explicitly disables object events (which may relate to versioning), risking data loss and inability to recover from ransomware or accidental deletions.\n\n3. **No Customer-Managed Encryption**: Uses default Oracle-managed keys instead of customer-managed keys, reducing control over encryption.\n\n4. **Sensitive Metadata**: The metadata contains potentially sensitive information (\"Blockofdata\") that could be exposed due to public read access.\n\n5. **Exposed Git Information**: Freeform tags expose internal details (commit hashes, file paths, contributors) that could aid attackers in reconnaissance.\n\n**Recommendations**: Set `access_type` to \"Private\", enable versioning, use customer-managed keys, remove sensitive metadata, and avoid exposing internal git details.",
+          "tokenUsage": {
+            "cached": 520,
+            "total": 520
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "d8520822-b525-4f82-8f7a-3ca3ccc0a8fa",
+        "latencyMs": 51,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"oci_identity_compartment\" \"tf-compartment\" {\n  compartment_id = var.tenancy_id\n  description    = \"Compartment for Terraform resources.\"\n  name           = \"third-compartment\"\n  enable_delete  = true\n  freeform_tags = {\n    git_commit           = \"5406d83ae1a7c43b5f1f44a0d044f4622f4a815d\"\n    git_file             = \"terraform/oracle/compartment.tf\"\n    git_last_modified_at = \"2022-04-06 15:27:36\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"20f6ad13-d679-4c7a-8d1b-befdd7f16b97\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security findings:\n\n- **Deletion protection is disabled**: `enable_delete = true` allows the compartment to be deleted through Terraform, which can lead to accidental or malicious removal of resources.\n- **Sensitive metadata exposure in tags**: `freeform_tags` includes repository, file path, commit hash, author email, and org details. This leaks internal implementation and ownership information that can aid reconnaissance.\n- **Hardcoded resource naming**: `name = \"third-compartment\"` is predictable and may reveal environment structure; not critical alone, but weak from an obscurity/metadata standpoint.\n\nNo direct IAM privilege misconfiguration is shown in this snippet.",
+          "tokenUsage": {
+            "cached": 372,
+            "total": 372
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\compartment.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\compartment.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "bfc95dd8-d022-464c-bb7c-8e416052aa9b",
+        "latencyMs": 24,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"oci_identity_compartment\" \"tf-compartment\" {\n  compartment_id = var.tenancy_id\n  description    = \"Compartment for Terraform resources.\"\n  name           = \"third-compartment\"\n  enable_delete  = true\n  freeform_tags = {\n    git_commit           = \"5406d83ae1a7c43b5f1f44a0d044f4622f4a815d\"\n    git_file             = \"terraform/oracle/compartment.tf\"\n    git_last_modified_at = \"2022-04-06 15:27:36\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"20f6ad13-d679-4c7a-8d1b-befdd7f16b97\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have reviewed the provided Terraform code. Here are the identified security and operational risks:\n\n1.  **Information Exposure (Metadata Leakage):**\n    *   The `freeform_tags` contain sensitive metadata, including specific Git commit hashes, file paths, and the email address of a developer. This provides an attacker with a roadmap of your internal repository structure and potential targets for social engineering.\n\n2.  **Accidental Resource Deletion:**\n    *   `enable_delete = true`: This allows the compartment to be deleted even if it contains resources (provided they are supported for deletion). In a production environment, this increases the risk of accidental data loss or service disruption. It should typically be set to `false` to act as a safety lock.\n\n3.  **Lack of Defined Governance (Defined Tags):**\n    *   The resource uses `freeform_tags` instead of `defined_tags`. Freeform tags do not support policy-based access control or schema validation, making it difficult to enforce security auditing, cost tracking, or automated governance policies.\n\n4.  **Hardcoded Naming:**\n    *   The `name = \"third-compartment\"` is static. While not a direct vulnerability, hardcoded names hinder the ability to rotate environments securely and can lead to naming collisions that disrupt security monitoring tools.",
+          "tokenUsage": {
+            "cached": 576,
+            "total": 576
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\compartment.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\compartment.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "577118b8-45c3-4654-a069-0fc8f4e8bc23",
+        "latencyMs": 28,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"oci_identity_compartment\" \"tf-compartment\" {\n  compartment_id = var.tenancy_id\n  description    = \"Compartment for Terraform resources.\"\n  name           = \"third-compartment\"\n  enable_delete  = true\n  freeform_tags = {\n    git_commit           = \"5406d83ae1a7c43b5f1f44a0d044f4622f4a815d\"\n    git_file             = \"terraform/oracle/compartment.tf\"\n    git_last_modified_at = \"2022-04-06 15:27:36\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"20f6ad13-d679-4c7a-8d1b-befdd7f16b97\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "Here are the security vulnerabilities in this Terraform code:\n\n1. **Hardcoded sensitive information**: The `freeform_tags` contain specific git commit details, file paths, and personal email addresses (james.woolfenden@gmail.com) which could expose internal repository structure and developer information.\n\n2. **Excessive metadata exposure**: The tags reveal detailed CI/CD pipeline information (commit hashes, timestamps, modifiers) that could aid attackers in understanding your infrastructure deployment patterns.\n\n3. **Enable_delete = true**: While convenient for Terraform management, this allows complete compartment deletion through Terraform, which could be exploited if credentials are compromised.\n\n4. **Lack of protective tags**: Missing security-focused tags that would help with monitoring, cost tracking, or compliance requirements.\n\n**Recommendations**: Remove sensitive metadata from tags, use variables for dynamic values, implement more restrictive deletion policies, and add security-focused tagging.",
+          "tokenUsage": {
+            "cached": 434,
+            "total": 434
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\compartment.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\compartment.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "cee71faf-36df-411d-bdd1-9f1e6de4c6c3",
+        "latencyMs": 33,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"oci_objectstorage_namespace\" \"example\" {\n  compartment_id = oci_identity_compartment.tf-compartment.id\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security findings in this Terraform snippet:\n\n1. **Potential privilege/compartment scope issue**\n   - The data source reads the Object Storage namespace using a compartment ID reference:\n     `compartment_id = oci_identity_compartment.tf-compartment.id`\n   - If the referenced compartment is overly broad or not tightly controlled, this can expose metadata for a larger-than-necessary scope.\n   - **Mitigation:** Ensure the OCI provider identity is least-privileged and the compartment is narrowly scoped.\n\n2. **Naming / reference risk**\n   - `oci_identity_compartment.tf-compartment.id` contains a hyphen in the label reference, which is invalid in Terraform expressions unless quoted/indexed correctly. This is more of a correctness issue than a security flaw, but broken references can lead to unexpected deployment behavior.\n   - **Mitigation:** Use a valid reference name, e.g. `tf_compartment`.\n\nNo direct high-risk security vulnerability is present in this snippet by itself.",
+          "tokenUsage": {
+            "cached": 256,
+            "total": 256
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\data.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "456b23d0-4d9a-4349-9f89-dba81219ccc2",
+        "latencyMs": 37,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"oci_objectstorage_namespace\" \"example\" {\n  compartment_id = oci_identity_compartment.tf-compartment.id\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have reviewed the provided Terraform snippet. While this specific block is a **Data Source** (used for fetching information) rather than a **Resource** (used for creating infrastructure), the following security considerations apply:\n\n### 1. Hardcoded Compartment Dependency\n*   **Vulnerability:** The code relies on a direct reference to `oci_identity_compartment.tf-compartment.id`. \n*   **Risk:** If this compartment is managed in the same state file and lacks proper **IAM policies**, an attacker with access to the Terraform state could identify the logical structure of your tenancy.\n*   **Recommendation:** Ensure the compartment being queried follows the **Principle of Least Privilege (PoLP)**.\n\n### 2. Scope of Data Exposure\n*   **Vulnerability:** The `oci_objectstorage_namespace` data source retrieves the Object Storage namespace name.\n*   **Risk:** While the namespace name itself is not a secret, it is a required parameter for API calls to interact with buckets. If this value is outputted in cleartext via `outputs.tf` or stored in an unencrypted **Terraform State file**, it aids in reconnaissance for potential bucket-bruteforcing or unauthorized API attempts.\n*   **Recommendation:** Ensure your Terraform state backend (e.g., OCI Object Storage with Object Locking/Versioning) is encrypted and access-restricted.\n\n### 3. Lack of Provider Constraints\n*   **Vulnerability:** The snippet does not show provider configuration or version pinning.\n*   **Risk:** Using an unverified or outdated OCI provider can lead to the use of deprecated API endpoints with weaker security protocols.\n*   **Recommendation:** Always pin your provider versions and use a secure `provider` block with restricted API keys or Instance Principals.\n\n### 4. Missing Context (Implicit Risk)\n*   **Vulnerability:** Data sources are often used to dynamically configure **Public Buckets** or **Pre-Authenticated Requests (PARs)**.\n*   **Risk:** If the namespace retrieved here is passed to a bucket resource where `access_type` is set to `ObjectRead` or `NoControl`, you risk data leakage.\n*   **Recommendation:** Audit all downstream resources that consume this data source to ensure they are not creating publicly accessible storage.",
+          "tokenUsage": {
+            "cached": 547,
+            "total": 547
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\data.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "0c9cb862-ef92-4a3f-807f-43a37c13d68c",
+        "latencyMs": 26,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"oci_objectstorage_namespace\" \"example\" {\n  compartment_id = oci_identity_compartment.tf-compartment.id\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "Here are the security vulnerabilities in this Terraform code:\n\n1. **Missing Provider Configuration** - No OCI provider block with proper authentication credentials\n2. **Hardcoded Compartment Reference** - Uses a hardcoded compartment name without validation\n3. **No Error Handling** - No mechanism to handle authentication failures or invalid compartment IDs\n4. **Excessive Permissions Risk** - The executing identity likely has broad permissions to read any compartment\n5. **Sensitive Data Exposure** - Namespace data could reveal organizational structure if logged improperly\n\n**Critical Missing**: Proper authentication method (instance principal, config file, or environment variables) and least-privilege IAM policies.",
+          "tokenUsage": {
+            "cached": 198,
+            "total": 198
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\data.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "4646f198-3d02-45dd-b8cc-da0f600e8448",
+        "latencyMs": 32,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nprovider \"oci\" {\n  #these to be provided by env vars\n  # private_key_path\n  # fingerprint\n  # tenancy_ocid \n  # user_ocid   \n  region = \"uk-london-1\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security findings:\n\n1. **No explicit authentication controls in code**\n   - The provider relies on environment variables for `tenancy_ocid`, `user_ocid`, `fingerprint`, and `private_key_path`.\n   - This is not a direct vulnerability by itself, but it increases the risk of **misconfiguration** and **credential exposure** if env vars are improperly managed or logged.\n\n2. **Potential hardcoded region**\n   - `region = \"uk-london-1\"` is not a security issue on its own, but hardcoding can lead to **accidental deployment in the wrong region**, which may violate data residency or compliance requirements.\n\n3. **No security posture controls shown**\n   - The snippet lacks any settings for least privilege, compartment restrictions, or policy controls.\n   - Again, not a direct vuln in this snippet, but it indicates **missing access governance** context.\n\nNo direct exploitable vulnerability is visible in the provided code snippet.",
+          "tokenUsage": {
+            "cached": 275,
+            "total": 275
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\provider.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "7a9548c5-4e70-48fc-9fe6-6255f3006c20",
+        "latencyMs": 37,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nprovider \"oci\" {\n  #these to be provided by env vars\n  # private_key_path\n  # fingerprint\n  # tenancy_ocid \n  # user_ocid   \n  region = \"uk-london-1\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, here is the review of the provided Terraform snippet:\n\n1.  **Hardcoded Region:** While not a direct vulnerability, hardcoding the region (`uk-london-1`) limits flexibility and can lead to accidental deployments in unintended jurisdictions, potentially violating data residency requirements.\n2.  **Implicit Trust in Environment Variables:** While using environment variables for credentials is better than hardcoding, it introduces risks if the execution environment (CI/CD runner or local machine) is compromised. Ensure these variables are marked as **sensitive/masked** in your CI/CD logs.\n3.  **Lack of Version Pinning:** The `oci` provider block does not specify a version. This can lead to \"supply chain\" issues where an automatic update to a newer, potentially malicious or buggy provider version occurs during `terraform init`.\n4.  **Missing Backend Configuration:** There is no remote state backend defined. Storing state locally (default) often results in the `terraform.tfstate` file—which contains **plain-text secrets and sensitive metadata**—being accidentally committed to version control.\n\n**Recommendations:**\n*   Add a `required_providers` block with a specific version constraint.\n*   Configure a secure **Remote Backend** (e.g., OCI Object Storage) with encryption enabled.\n*   Ensure the `private_key_path` points to a file with restricted OS permissions (e.g., `chmod 600`).",
+          "tokenUsage": {
+            "cached": 385,
+            "total": 385
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\provider.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "a6897079-0632-4eee-a300-9068a8247bca",
+        "latencyMs": 45,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nprovider \"oci\" {\n  #these to be provided by env vars\n  # private_key_path\n  # fingerprint\n  # tenancy_ocid \n  # user_ocid   \n  region = \"uk-london-1\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "Based on the provided Terraform code, here are the security vulnerabilities:\n\n1. **Hardcoded Region**: The region is hardcoded, which reduces portability and may not match deployment requirements.\n\n2. **Missing Authentication Validation**: No validation that required environment variables (`private_key_path`, `fingerprint`, `tenancy_ocid`, `user_ocid`) are actually set, which could lead to runtime errors.\n\n3. **Potential Secret Exposure**: While credentials are referenced via environment variables (good practice), there's no indication of how these environment variables are secured or managed.\n\n4. **No Provider Version Constraint**: Missing `version` constraint for the OCI provider, which could lead to unexpected behavior from provider updates.\n\n**Recommendations**:\n- Add `version` constraint for the OCI provider\n- Use Terraform variables for region configuration\n- Implement validation for required environment variables\n- Ensure environment variables containing secrets are properly secured (e.g., using secret management tools)",
+          "tokenUsage": {
+            "cached": 282,
+            "total": 282
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\provider.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "23ea3750-b816-4072-91e9-d54655db74e5",
+        "latencyMs": 16,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nvariable \"tenancy_id\" {\n  description = \"value supplied by env var\"\n  default     = \"\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues in this snippet:\n\n- **Empty default for `tenancy_id`**: If not explicitly set, Terraform may proceed with an invalid/empty tenancy ID, which can lead to misconfiguration or unintended deployment behavior.\n- **No validation on input**: The variable accepts any string. There’s no check that it’s a valid OCI tenancy OCID format, increasing the risk of accidental misconfiguration.\n- **Potential exposure via environment/config handling**: The description suggests it comes from an env var, but there’s no enforcement. If supplied insecurely (e.g., in plaintext tfvars or logs), it could be exposed.\n\nRecommendation: remove the empty default, add validation for OCID format, and ensure it’s sourced securely.",
+          "tokenUsage": {
+            "cached": 206,
+            "total": 206
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\variables.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "e360ed52-d003-4634-ad97-9ad980466742",
+        "latencyMs": 22,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nvariable \"tenancy_id\" {\n  description = \"value supplied by env var\"\n  default     = \"\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, here is the review of the provided Terraform snippet:\n\n### Vulnerabilities & Risks\n\n1.  **Hardcoded Default Value (Potential):** While currently empty (`\"\"`), the presence of a `default` key for a sensitive identifier like `tenancy_id` encourages developers to hardcode IDs. If a real ID is committed to version control, it facilitates reconnaissance for attackers.\n2.  **Lack of Sensitive Flag:** The variable is not marked as `sensitive = true`. Without this, the `tenancy_id` will be printed in cleartext to console outputs during `terraform plan/apply` and stored in cleartext in the `terraform.tfstate` file.\n3.  **Missing Validation:** There is no `validation` block to ensure the input follows the expected format (e.g., an OCI OCID regex). This allows for injection of malformed strings or unexpected values that could lead to deployment errors or insecure configurations downstream.\n4.  **Information Disclosure:** In multi-tenant environments, leaking a `tenancy_id` allows an attacker to target specific cloud boundaries and is often the first piece of information needed for cross-tenant exploit attempts.\n\n### Recommended Remediation\n\n```hcl\nvariable \"tenancy_id\" {\n  type        = string\n  description = \"The OCID of the tenancy.\"\n  sensitive   = true # Prevents leaking in console output\n\n  validation {\n    condition     = can(regex(\"^ocid1\\\\.tenancy\\\\.oc1\\\\..*\", var.tenancy_id))\n    error_message = \"The tenancy_id must be a valid OCI tenancy OCID.\"\n  }\n}\n```\n\n**Note:** Always ensure that the environment variable providing this value (e.g., `TF_VAR_tenancy_id`) is managed via a secure secret manager (like HashiCorp Vault, GitHub Secrets, or AWS Secrets Manager) rather than local shell history.",
+          "tokenUsage": {
+            "cached": 465,
+            "total": 465
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\variables.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "ba5bde2a-5494-4279-9f4d-1e7f118c8463",
+        "latencyMs": 26,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nvariable \"tenancy_id\" {\n  description = \"value supplied by env var\"\n  default     = \"\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "- **Missing validation**: No constraints on `tenancy_id` format (should validate it's a valid OCID format)\n- **Sensitive data exposure**: Should be marked as `sensitive = true` since tenancy IDs are sensitive identifiers\n- **Insecure default**: Empty default value could lead to misconfiguration\n- **Missing type constraint**: Should specify `type = string` to prevent type coercion issues\n\n**Recommended fixes:**\n```terraform\nvariable \"tenancy_id\" {\n  type        = string\n  description = \"OCI Tenancy OCID\"\n  sensitive   = true\n  validation {\n    condition     = can(regex(\"^ocid1\\\\.tenancy\\\\.oc1\\\\.\\\\w{21,63}$\", var.tenancy_id))\n    error_message = \"Must be a valid OCI tenancy OCID format.\"\n  }\n}\n```",
+          "tokenUsage": {
+            "cached": 233,
+            "total": 233
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\variables.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 15,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 5964,
+        "total": 5964,
+        "numRequests": 15,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      },
+      "durationMs": 326,
+      "evaluationDurationMs": 326
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Terraform Vulnerability Detection Benchmark - ORACLE",
+    "prompts": [
+      "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}"
+    ],
+    "providers": [
+      "openrouter:openai/gpt-5.4-mini",
+      "openrouter:google/gemini-3-flash-preview",
+      "openrouter:deepseek/deepseek-chat-v3.1"
+    ],
+    "tests": [
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/oracle/bucket.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #1"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/oracle/compartment.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #2"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/oracle/data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #3"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/oracle/provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #4"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/oracle/variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #5"
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "outputPath": [
+      "results_oracle.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.3",
+    "nodeVersion": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "exportedAt": "2026-04-08T19:01:03.440Z",
+    "evaluationCreatedAt": "2026-04-08T19:01:02.811Z"
+  }
+}

@@ -1,0 +1,14 @@
+terraform_code,expected_ids
+file://terragoat/terraform/aws/db-app.tf,"CKV_AWS_118,CKV_AWS_126,CKV_AWS_129,CKV_AWS_133,CKV_AWS_135,CKV_AWS_157,CKV_AWS_16,CKV_AWS_161,CKV_AWS_17,CKV_AWS_226,CKV_AWS_23,CKV_AWS_287,CKV_AWS_288,CKV_AWS_289,CKV_AWS_290,CKV_AWS_293,CKV_AWS_355,CKV_AWS_382,CKV_AWS_79,CKV_AWS_8"
+file://terragoat/terraform/aws/ec2.tf,"CKV_AWS_126,CKV_AWS_130,CKV_AWS_135,CKV_AWS_189,CKV_AWS_23,CKV_AWS_24,CKV_AWS_260,CKV_AWS_3,CKV_AWS_382,CKV_AWS_46,CKV_AWS_79,CKV_AWS_8"
+file://terragoat/terraform/aws/ecr.tf,"CKV_AWS_136,CKV_AWS_163,CKV_AWS_51"
+file://terragoat/terraform/aws/eks.tf,"CKV_AWS_130,CKV_AWS_37,CKV_AWS_38,CKV_AWS_39,CKV_AWS_58"
+file://terragoat/terraform/aws/elb.tf,"CKV_AWS_127,CKV_AWS_376,CKV_AWS_92"
+file://terragoat/terraform/aws/es.tf,"CKV_AWS_109,CKV_AWS_111,CKV_AWS_137,CKV_AWS_228,CKV_AWS_247,CKV_AWS_248,CKV_AWS_283,CKV_AWS_317,CKV_AWS_318,CKV_AWS_356,CKV_AWS_5,CKV_AWS_84"
+file://terragoat/terraform/aws/iam.tf,"CKV_AWS_273,CKV_AWS_286,CKV_AWS_287,CKV_AWS_288,CKV_AWS_289,CKV_AWS_290,CKV_AWS_355"
+file://terragoat/terraform/aws/kms.tf,CKV_AWS_7
+file://terragoat/terraform/aws/lambda.tf,"CKV_AWS_115,CKV_AWS_116,CKV_AWS_117,CKV_AWS_173,CKV_AWS_272,CKV_AWS_363,CKV_AWS_45,CKV_AWS_50"
+file://terragoat/terraform/aws/neptune.tf,"CKV_AWS_101,CKV_AWS_279,CKV_AWS_280,CKV_AWS_347,CKV_AWS_359,CKV_AWS_361,CKV_AWS_362,CKV_AWS_44"
+file://terragoat/terraform/aws/providers.tf,CKV_AWS_41
+file://terragoat/terraform/aws/rds.tf,"CKV_AWS_133,CKV_AWS_139,CKV_AWS_162,CKV_AWS_313,CKV_AWS_324,CKV_AWS_325,CKV_AWS_326,CKV_AWS_327,CKV_AWS_96"
+file://terragoat/terraform/aws/s3.tf,CKV_AWS_186

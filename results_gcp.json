@@ -1,0 +1,1501 @@
+{
+  "evalId": "eval-hXV-2026-04-08T19:00:56",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-04-08T19:00:56.985Z",
+    "prompts": [
+      {
+        "id": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "provider": "openrouter:openai/gpt-5.4-mini",
+        "metrics": {
+          "score": 7,
+          "testPassCount": 7,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 293,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 3353,
+            "total": 3353,
+            "numRequests": 7,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "provider": "openrouter:google/gemini-3-flash-preview",
+        "metrics": {
+          "score": 7,
+          "testPassCount": 7,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 273,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 5230,
+            "total": 5230,
+            "numRequests": 7,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+        "provider": "openrouter:deepseek/deepseek-chat-v3.1",
+        "metrics": {
+          "score": 7,
+          "testPassCount": 7,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 253,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 3574,
+            "total": 3574,
+            "numRequests": 7,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "f581e2ec-2b6d-4784-b1d5-4576aaa06303",
+        "latencyMs": 42,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_sql_database_instance\" \"master_instance\" {\n  name             = \"terragoat-${var.environment}-master\"\n  database_version = \"POSTGRES_11\"\n  region           = var.region\n\n  settings {\n    tier = \"db-f1-micro\"\n    ip_configuration {\n      ipv4_enabled = true\n      authorized_networks {\n        name  = \"WWW\"\n        value = \"0.0.0.0/0\"\n      }\n    }\n    backup_configuration {\n      enabled = false\n    }\n  }\n}\n\nresource \"google_bigquery_dataset\" \"dataset\" {\n  dataset_id = \"terragoat_${var.environment}_dataset\"\n  access {\n    special_group = \"allAuthenticatedUsers\"\n    role          = \"READER\"\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__big_data_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"2560d883-bc3a-4cb6-b9fc-fb666edf626e\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues found:\n\n- **Cloud SQL exposed to the public internet**\n  - `ipv4_enabled = true` and `authorized_networks` set to `0.0.0.0/0`\n  - This allows connections from anywhere, greatly increasing brute-force and exploitation risk.\n\n- **No Cloud SQL backups enabled**\n  - `backup_configuration.enabled = false`\n  - Disables recovery options and increases impact of data loss/ransomware.\n\n- **Outdated PostgreSQL version**\n  - `database_version = \"POSTGRES_11\"`\n  - PostgreSQL 11 is old/EOL, likely missing security patches.\n\n- **BigQuery dataset readable by all authenticated Google users**\n  - `special_group = \"allAuthenticatedUsers\"` with `READER`\n  - Any logged-in Google account can read the dataset, causing unintended data exposure.\n\n- **No network restriction / data access hardening on BigQuery**\n  - Public-ish access model suggests overly broad permissions; should be least-privilege only.\n\nIf you want, I can also provide a hardened Terraform version.",
+          "tokenUsage": {
+            "cached": 563,
+            "total": 563
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "9d4b7645-99f8-43fb-9b88-1a33a24610f7",
+        "latencyMs": 50,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_sql_database_instance\" \"master_instance\" {\n  name             = \"terragoat-${var.environment}-master\"\n  database_version = \"POSTGRES_11\"\n  region           = var.region\n\n  settings {\n    tier = \"db-f1-micro\"\n    ip_configuration {\n      ipv4_enabled = true\n      authorized_networks {\n        name  = \"WWW\"\n        value = \"0.0.0.0/0\"\n      }\n    }\n    backup_configuration {\n      enabled = false\n    }\n  }\n}\n\nresource \"google_bigquery_dataset\" \"dataset\" {\n  dataset_id = \"terragoat_${var.environment}_dataset\"\n  access {\n    special_group = \"allAuthenticatedUsers\"\n    role          = \"READER\"\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__big_data_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"2560d883-bc3a-4cb6-b9fc-fb666edf626e\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have identified the following critical security vulnerabilities in your Terraform code:\n\n### 1. Google SQL Instance (`google_sql_database_instance`)\n*   **Public Exposure (0.0.0.0/0):** The `authorized_networks` block allows traffic from any IP address on the internet. This exposes the database to brute-force attacks and unauthorized access attempts.\n*   **Public IP Enabled:** `ipv4_enabled = true` assigns a public IP to the instance. Best practice is to use Private IP (Private Service Connect/VPC Peering) for database instances.\n*   **Backups Disabled:** `backup_configuration { enabled = false }` creates a high risk of data loss and prevents Point-in-Time Recovery (PITR).\n*   **Unencrypted Traffic:** The configuration lacks `require_ssl = true` within `ip_configuration`, meaning data may be transmitted in cleartext.\n*   **Outdated Version:** `POSTGRES_11` is nearing/at end-of-life. Use a supported version like PostgreSQL 14 or 15 for security patches.\n\n### 2. BigQuery Dataset (`google_bigquery_dataset`)\n*   **Public/Authenticated Access:** The `special_group = \"allAuthenticatedUsers\"` grants the `READER` role to **anyone with a Google account** (not just users in your organization). This is a major data leak vulnerability.\n*   **Lack of Encryption:** There is no `default_encryption_configuration` block defined, meaning the dataset relies on Google-managed keys rather than Customer-Managed Encryption Keys (CMEK).\n\n### Recommendations\n1.  **Restrict SQL Access:** Remove `0.0.0.0/0` and use Private IP.\n2.  **Enable SQL Backups:** Set `enabled = true` in the backup configuration.\n3.  **Enforce SSL:** Add `require_ssl = true` to the SQL instance.\n4.  **Fix BigQuery IAM:** Remove `allAuthenticatedUsers` and grant access only to specific service accounts or domain-specific groups.",
+          "tokenUsage": {
+            "cached": 874,
+            "total": 874
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "f089c2bc-f685-4626-9b98-fd280913a002",
+        "latencyMs": 57,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_sql_database_instance\" \"master_instance\" {\n  name             = \"terragoat-${var.environment}-master\"\n  database_version = \"POSTGRES_11\"\n  region           = var.region\n\n  settings {\n    tier = \"db-f1-micro\"\n    ip_configuration {\n      ipv4_enabled = true\n      authorized_networks {\n        name  = \"WWW\"\n        value = \"0.0.0.0/0\"\n      }\n    }\n    backup_configuration {\n      enabled = false\n    }\n  }\n}\n\nresource \"google_bigquery_dataset\" \"dataset\" {\n  dataset_id = \"terragoat_${var.environment}_dataset\"\n  access {\n    special_group = \"allAuthenticatedUsers\"\n    role          = \"READER\"\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__big_data_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"2560d883-bc3a-4cb6-b9fc-fb666edf626e\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "1. **Public SQL Instance**: `google_sql_database_instance` allows inbound connections from `0.0.0.0/0`, exposing the database to the entire internet.\n\n2. **Backups Disabled**: `backup_configuration` is disabled, risking data loss in case of failure or corruption.\n\n3. **Overly Permissive BigQuery Dataset**: `google_bigquery_dataset` grants `READER` access to `allAuthenticatedUsers`, allowing any authenticated Google user to read the dataset.\n\n**Recommendations**:\n- Restrict SQL retention.\n- Limit BigQuery access to specific users or groups.",
+          "tokenUsage": {
+            "cached": 504,
+            "total": 504
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "01037150-f15b-493e-987d-436b8426b8cc",
+        "latencyMs": 63,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_storage_bucket\" \"terragoat_website\" {\n  name          = \"terragot-${var.environment}\"\n  location      = var.location\n  force_destroy = true\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__gcs_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\"\n  }\n}\n\nresource \"google_storage_bucket_iam_binding\" \"allow_public_read\" {\n  bucket  = google_storage_bucket.terragoat_website.id\n  members = [\"allUsers\"]\n  role    = \"roles/storage.objectViewer\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues found:\n\n- **Public bucket access**: `members = [\"allUsers\"]` with `roles/storage.objectViewer` makes bucket objects publicly readable.\n- **Potential data exposure**: If the bucket contains any sensitive files, they can be downloaded by anyone.\n- **Destructive deletion enabled**: `force_destroy = true` allows Terraform to delete the bucket even if it contains objects, increasing risk of accidental or malicious data loss.\n- **No public access prevention settings**: No bucket-level controls are configured to block public IAM bindings or enforce restricted access.",
+          "tokenUsage": {
+            "cached": 391,
+            "total": 391
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "ed1c82cf-2add-4619-8f54-fa837bbb261b",
+        "latencyMs": 37,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_storage_bucket\" \"terragoat_website\" {\n  name          = \"terragot-${var.environment}\"\n  location      = var.location\n  force_destroy = true\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__gcs_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\"\n  }\n}\n\nresource \"google_storage_bucket_iam_binding\" \"allow_public_read\" {\n  bucket  = google_storage_bucket.terragoat_website.id\n  members = [\"allUsers\"]\n  role    = \"roles/storage.objectViewer\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have identified the following vulnerabilities in the provided Terraform code:\n\n1.  **Public Exposure (Insecure Direct Object Reference):** The `google_storage_bucket_iam_binding` grants `roles/storage.objectViewer` to `allUsers`. This makes the bucket content publicly accessible to anyone on the internet, risking data leaks.\n2.  **Lack of Encryption (At-Rest):** The bucket does not define a `encryption` block with a Customer-Managed Encryption Key (CMEK). It relies on default Google-managed keys, which may not meet strict compliance requirements.\n3.  **Missing Uniform Bucket-Level Access:** The code does not set `uniform_bucket_level_access = true`. Without this, legacy fine-grained ACLs can be used, making access control audits difficult and prone to misconfiguration.\n4.  **Missing Logging:** There is no `logging` block configured. Without access logs, you cannot audit who is accessing or downloading data from the bucket.\n5.  **Missing Versioning:** The `versioning` block is absent. If data is accidentally deleted or overwritten (especially with `force_destroy = true`), there is no native way to recover previous versions.\n6.  **Force Destroy Enabled:** The `force_destroy = true` argument allows Terraform to delete the bucket even if it contains objects. This increases the risk of accidental, permanent data loss during infrastructure updates.\n7.  **Missing Retention Policy:** There is no `retention_policy` defined, leaving the bucket vulnerable to immediate data deletion or modification (lack of ransomware protection/WORM compliance).",
+          "tokenUsage": {
+            "cached": 677,
+            "total": 677
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "826b333a-3190-4c45-a9c2-2cdd0ad20086",
+        "latencyMs": 41,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_storage_bucket\" \"terragoat_website\" {\n  name          = \"terragot-${var.environment}\"\n  location      = var.location\n  force_destroy = true\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__gcs_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\"\n  }\n}\n\nresource \"google_storage_bucket_iam_binding\" \"allow_public_read\" {\n  bucket  = google_storage_bucket.terragoat_website.id\n  members = [\"allUsers\"]\n  role    = \"roles/storage.objectViewer\"\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "1. **Publicly accessible bucket**: The `google_storage_bucket_iam_binding` grants `allUsers` (public internet) read access to all objects via `roles/storage.objectViewer`.\n\n2. **Force destroy enabled**: `force_destroy = true` allows bucket deletion even when containing objects, risking accidental data loss.\n\n object versioning",
+          "tokenUsage": {
+            "cached": 436,
+            "total": 436
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "f9038968-1aa4-433e-8cfa-006b6d1a2464",
+        "latencyMs": 48,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"google_compute_zones\" \"available_zones\" {\n  project = var.project\n  region  = var.region\n}\n\nresource \"google_container_cluster\" \"workload_cluster\" {\n  name               = \"terragoat-${var.environment}-cluster\"\n  logging_service    = \"none\"\n  location           = var.region\n  initial_node_count = 1\n\n  enable_legacy_abac       = true\n  monitoring_service       = \"none\"\n  remove_default_node_pool = true\n  network                  = google_compute_network.vpc.name\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\n  master_authorized_networks_config {\n    cidr_blocks {\n      cidr_block = \"0.0.0.0/0\"\n    }\n  }\n}\n\nresource \"google_container_node_pool\" \"custom_node_pool\" {\n  cluster  = google_container_cluster.workload_cluster.name\n  location = var.region\n\n  node_config {\n    image_type = \"Ubuntu\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues in this Terraform:\n\n- **Legacy ABAC enabled**: `enable_legacy_abac = true` weakens Kubernetes authorization and should be disabled.\n- **Control plane exposed to the world**: `master_authorized_networks_config` allows `0.0.0.0/0`, effectively permitting access from anywhere.\n- **No node pool hardening**: `node_config` only sets `image_type`; missing security settings like:\n  - no explicit service account\n  - no OAuth scopes restriction\n  - no Shielded GKE node settings\n  - no workload metadata protection\n  - no node auto-upgrades/auto-repair\n- **Logging and monitoring disabled**: `logging_service = \"none\"` and `monitoring_service = \"none\"` reduce detection and audit visibility.\n- **Default node pool behavior is risky**: `initial_node_count = 1` with `remove_default_node_pool = true` is fine only if replacement is immediate; otherwise there’s a window of insecure/default configuration.\n- **Use of a public subnet**: `google_compute_subnetwork.public-subnetwork.name` suggests nodes may be placed in a public subnet, increasing exposure if not intentionally restricted.",
+          "tokenUsage": {
+            "cached": 486,
+            "total": 486
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "8b147f03-8187-48b7-b30a-d4c1a5f88308",
+        "latencyMs": 55,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"google_compute_zones\" \"available_zones\" {\n  project = var.project\n  region  = var.region\n}\n\nresource \"google_container_cluster\" \"workload_cluster\" {\n  name               = \"terragoat-${var.environment}-cluster\"\n  logging_service    = \"none\"\n  location           = var.region\n  initial_node_count = 1\n\n  enable_legacy_abac       = true\n  monitoring_service       = \"none\"\n  remove_default_node_pool = true\n  network                  = google_compute_network.vpc.name\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\n  master_authorized_networks_config {\n    cidr_blocks {\n      cidr_block = \"0.0.0.0/0\"\n    }\n  }\n}\n\nresource \"google_container_node_pool\" \"custom_node_pool\" {\n  cluster  = google_container_cluster.workload_cluster.name\n  location = var.region\n\n  node_config {\n    image_type = \"Ubuntu\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have identified the following vulnerabilities in your Terraform code:\n\n1.  **Legacy ABAC Enabled (`enable_legacy_abac = true`):** This grants excessive permissions to the Kubernetes API. It should be disabled in favor of fine-grained Role-Based Access Control (RBAC).\n2.  **Public Control Plane Access (`cidr_block = \"0.0.0.0/0\"`):** The Kubernetes master is exposed to the entire internet. Access should be restricted to specific, trusted IP ranges.\n3.  **Logging Disabled (`logging_service = \"none\"`):** Disabling logs prevents threat detection, incident response, and auditing of cluster activities.\n4.  **Monitoring Disabled (`monitoring_service = \"none\"`):** Lack of monitoring hinders the ability to detect performance anomalies or resource-based attacks.\n5.  **Public Subnetwork Deployment:** The cluster is associated with `public-subnetwork`. Nodes should ideally be deployed in private subnets to prevent direct internet exposure.\n6.  **Default Service Account (Implicit):** The `node_config` does not specify a non-default service account. By default, GKE nodes use the Compute Engine default service account, which typically has broad `Editor` permissions.\n7.  **Missing Workload Identity:** The configuration does not enable GKE Workload Identity, forcing pods to potentially use node-level service accounts, which violates the principle of least privilege.\n8.  **Missing Secure Boot/Shielded GKE:** The `node_config` lacks `shielded_instance_config`, leaving nodes vulnerable to boot-level rootkits or firmware manipulation.",
+          "tokenUsage": {
+            "cached": 634,
+            "total": 634
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "5f313992-30e6-47ef-b782-84fcc50a8000",
+        "latencyMs": 32,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"google_compute_zones\" \"available_zones\" {\n  project = var.project\n  region  = var.region\n}\n\nresource \"google_container_cluster\" \"workload_cluster\" {\n  name               = \"terragoat-${var.environment}-cluster\"\n  logging_service    = \"none\"\n  location           = var.region\n  initial_node_count = 1\n\n  enable_legacy_abac       = true\n  monitoring_service       = \"none\"\n  remove_default_node_pool = true\n  network                  = google_compute_network.vpc.name\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\n  master_authorized_networks_config {\n    cidr_blocks {\n      cidr_block = \"0.0.0.0/0\"\n    }\n  }\n}\n\nresource \"google_container_node_pool\" \"custom_node_pool\" {\n  cluster  = google_container_cluster.workload_cluster.name\n  location = var.region\n\n  node_config {\n    image_type = \"Ubuntu\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "**Security Vulnerabilities:**\n\n1.  **Public GKE Control Plane:** `master_authorized_networks_config` allows `0.0.0.0/0`, exposing the cluster's control plane to the entire internet. This is a critical misconfiguration.\n2.  **Legacy ABAC Enabled:** `enable_legacy_abac = true` activates Attribute-Based Access Control, a coarse and deprecated authorization method. It should be disabled in favor of RBAC.\n3.  **Disabled Logging & Monitoring:** Setting `logging_service = \"none\"` and `monitoring_service = \"none\"` disables essential Cloud Logging and Cloud Monitoring, eliminating audit trails and operational visibility.\n4.  **Default Service Account:** The node pool uses the Compute Engine default service account, which has overly broad permissions (`Editor` role) by default. This violates the principle of least privilege.\n5.  **No Network Policy:** The cluster is created without a network policy provider (e.g., Calico), preventing enforcement of pod-to-pod communication rules.\n6.  **No Shielded Nodes:** The node configuration does not enable Shielded Nodes (with Secure Boot, integrity monitoring, etc.), reducing defense against rootkits and boot-level attacks.\n7.  **No Confidential Nodes/Compute:** The node pool does not use Confidential VMs, meaning data is processed in plaintext in memory.",
+          "tokenUsage": {
+            "cached": 550,
+            "total": 550
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "4a91d052-9ae8-47b6-b5ca-5d9acf25a603",
+        "latencyMs": 39,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"google_compute_zones\" \"zones\" {}\n\nresource \"google_compute_instance\" \"server\" {\n  machine_type = \"n1-standard-1\"\n  name         = \"terragoat-${var.environment}-machine\"\n  zone         = data.google_compute_zones.zones.names[0]\n  boot_disk {\n    initialize_params {\n      image = \"debian-cloud/debian-9\"\n    }\n    auto_delete = true\n  }\n  network_interface {\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\n    access_config {}\n  }\n  can_ip_forward = true\n\n  metadata = {\n    block-project-ssh-keys = false\n    enable-oslogin         = false\n    serial-port-enable     = true\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\"\n  }\n}\n\nresource \"google_compute_disk\" \"unencrypted_disk\" {\n  name = \"terragoat-${var.environment}-disk\"\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues found:\n\n- **Public IP exposed**: `access_config {}` assigns an external IP to the VM, increasing attack surface.\n- **IP forwarding enabled**: `can_ip_forward = true` allows the instance to route traffic, which can be abused as a pivot/proxy if compromised.\n- **Weak SSH/security settings**:\n  - `block-project-ssh-keys = false` allows project-wide SSH keys.\n  - `enable-oslogin = false` disables OS Login, making SSH access harder to centrally control/audit.\n- **Serial console enabled**: `serial-port-enable = true` can expose sensitive access paths if not tightly restricted.\n- **Outdated OS image**: `debian-cloud/debian-9` is end-of-life/obsolete, likely missing security patches.\n- **No disk encryption specified**: `google_compute_disk` lacks customer-managed encryption key (CMEK) configuration; relies on defaults only.\n- **No firewall/network controls shown**: instance is in a public subnet and externally reachable, but no explicit restriction of inbound access is defined here.",
+          "tokenUsage": {
+            "cached": 747,
+            "total": 747
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "d2768c57-26de-4f5c-866d-5d14c969e4eb",
+        "latencyMs": 43,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"google_compute_zones\" \"zones\" {}\n\nresource \"google_compute_instance\" \"server\" {\n  machine_type = \"n1-standard-1\"\n  name         = \"terragoat-${var.environment}-machine\"\n  zone         = data.google_compute_zones.zones.names[0]\n  boot_disk {\n    initialize_params {\n      image = \"debian-cloud/debian-9\"\n    }\n    auto_delete = true\n  }\n  network_interface {\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\n    access_config {}\n  }\n  can_ip_forward = true\n\n  metadata = {\n    block-project-ssh-keys = false\n    enable-oslogin         = false\n    serial-port-enable     = true\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\"\n  }\n}\n\nresource \"google_compute_disk\" \"unencrypted_disk\" {\n  name = \"terragoat-${var.environment}-disk\"\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have identified the following security vulnerabilities and misconfigurations in your Terraform code:\n\n1.  **Public IP Exposure:** The `access_config {}` block assigns a public IPv4 address to the instance, making it directly reachable from the internet and increasing the attack surface.\n2.  **IP Forwarding Enabled:** `can_ip_forward = true` allows the instance to send and receive packets with non-matching source/destination IPs. Unless this is a NAT gateway or VPN, this should be `false` to prevent traffic redirection attacks.\n3.  **OS Login Disabled:** `enable-oslogin = false` disables Google’s managed SSH access control. Enabling OS Login is a best practice for centralizing IAM-based access management.\n4.  **Project-wide SSH Keys Allowed:** `block-project-ssh-keys = false` allows any SSH key defined at the project level to access this instance, violating the principle of least privilege.\n5.  **Serial Port Enabled:** `serial-port-enable = true` allows access to the serial console. This can be used to bypass network security controls and should be disabled unless actively troubleshooting.\n6.  **Missing Disk Encryption:** The `google_compute_disk` and `boot_disk` do not specify a `disk_encryption_key`. While GCP encrypts at rest by default, security standards often require Customer-Managed Encryption Keys (CMEK) for sensitive workloads.\n7.  **Outdated OS Image:** `debian-9` (Stretch) is end-of-life (EOL) and no longer receives official security updates, making the instance vulnerable to unpatched exploits.\n8.  **Default Service Account:** The absence of a `service_account` block means the instance will likely use the \"Compute Engine default service account,\" which typically has broad `Editor` permissions. You should assign a custom service account with limited scopes.\n9.  **Missing Shielded VM Features:** The configuration does not enable `shielded_instance_config` (Secure Boot, vTPM, Integrity Monitoring), which protects against boot-level malware and rootkits.",
+          "tokenUsage": {
+            "cached": 1102,
+            "total": 1102
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "c744db24-7e49-4619-a6d3-384f1b9a323d",
+        "latencyMs": 50,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\ndata \"google_compute_zones\" \"zones\" {}\n\nresource \"google_compute_instance\" \"server\" {\n  machine_type = \"n1-standard-1\"\n  name         = \"terragoat-${var.environment}-machine\"\n  zone         = data.google_compute_zones.zones.names[0]\n  boot_disk {\n    initialize_params {\n      image = \"debian-cloud/debian-9\"\n    }\n    auto_delete = true\n  }\n  network_interface {\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\n    access_config {}\n  }\n  can_ip_forward = true\n\n  metadata = {\n    block-project-ssh-keys = false\n    enable-oslogin         = false\n    serial-port-enable     = true\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\"\n  }\n}\n\nresource \"google_compute_disk\" \"unencrypted_disk\" {\n  name = \"terragoat-${var.environment}-disk\"\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "**Security Vulnerabilities:**\n\n1.  **Public IP & No Firewall:** `access_config {}` assigns a public IP without a restrictive firewall rule, exposing the instance to the internet.\n2.  **IP Forwarding Enabled:** `can_ip_forward = true` is unnecessary for most workloads and increases the attack surface.\n3.  **Weak OS Login Controls:** `enable-oslogin = false` disables a recommended identity-aware SSH access control.\n4.  **Serial Port Enabled:** `serial-port-enable = true` provides a low-level access method that bypasses normal authentication if not strictly needed.\n5.  **Unencrypted Disk:** `google_compute_disk` resource lacks `disk_encryption_key` block, storing data at rest unencrypted by default.\n6.  **Sensitive Metadata in Labels:** Git commit hashes, file paths, and usernames in labels could aid attackers in reconnaissance.\n7.  **Outdated Debian Image:** `debian-cloud/debian-9` is outdated (End of Life). Use a current, supported image.\n\n**Key Recommendations:**\n*   Avoid public IPs or implement strict firewall rules.\n*   Disable IP forwarding unless required.\n*   Enable OS Login.\n*   Disable the serial port.\n*   Always use customer-managed encryption keys (CMEK) or at least Google-managed keys for disks.\n*   Remove sensitive metadata from labels.\n*   Use a current, patched OS image.",
+          "tokenUsage": {
+            "cached": 860,
+            "total": 860
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "0cc5f33c-d79a-43e1-88bd-82c4b9eadff6",
+        "latencyMs": 27,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_compute_network\" \"vpc\" {\n  name                    = \"terragoat-${var.environment}-network\"\n  description             = \"Virtual vulnerable-by-design network\"\n  auto_create_subnetworks = false\n}\n\nresource \"google_compute_subnetwork\" \"public-subnetwork\" {\n  name          = \"terragoat-${var.environment}-public-subnetwork\"\n  ip_cidr_range = \"10.0.0.0/24\"\n  region        = var.region\n  network       = google_compute_network.vpc.id\n\n  secondary_ip_range {\n    range_name    = \"tf-test-secondary-range-update1\"\n    ip_cidr_range = \"192.168.10.0/24\"\n  }\n}\n\nresource \"google_compute_firewall\" \"allow_all\" {\n  name          = \"terragoat-${var.environment}-firewall\"\n  network       = google_compute_network.vpc.id\n  source_ranges = [\"0.0.0.0/0\"]\n  allow {\n    protocol = \"tcp\"\n    ports    = [\"0-65535\"]\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues found:\n\n- **Wide-open firewall rule**: `source_ranges = [\"0.0.0.0/0\"]` allows traffic from anywhere on the internet.\n- **All TCP ports exposed**: `ports = [\"0-65535\"]` permits inbound access to every TCP port, greatly increasing attack surface.\n- **Potentially public subnet exposure**: The subnet is named `public-subnetwork` and is attached to an open network; combined with the firewall, instances here could be directly reachable.\n- **No egress/ingress restrictions beyond this rule**: There are no least-privilege network controls or allowlists, so access is overly permissive.\n\nPotential concern:\n- **Unusual secondary CIDR range**: `192.168.10.0/24` is private, but ensure it doesn’t overlap with other internal networks if routed/VPN-connected.",
+          "tokenUsage": {
+            "cached": 439,
+            "total": 439
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "1608b7ac-1372-408e-91ff-823a40c736d5",
+        "latencyMs": 36,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_compute_network\" \"vpc\" {\n  name                    = \"terragoat-${var.environment}-network\"\n  description             = \"Virtual vulnerable-by-design network\"\n  auto_create_subnetworks = false\n}\n\nresource \"google_compute_subnetwork\" \"public-subnetwork\" {\n  name          = \"terragoat-${var.environment}-public-subnetwork\"\n  ip_cidr_range = \"10.0.0.0/24\"\n  region        = var.region\n  network       = google_compute_network.vpc.id\n\n  secondary_ip_range {\n    range_name    = \"tf-test-secondary-range-update1\"\n    ip_cidr_range = \"192.168.10.0/24\"\n  }\n}\n\nresource \"google_compute_firewall\" \"allow_all\" {\n  name          = \"terragoat-${var.environment}-firewall\"\n  network       = google_compute_network.vpc.id\n  source_ranges = [\"0.0.0.0/0\"]\n  allow {\n    protocol = \"tcp\"\n    ports    = [\"0-65535\"]\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have identified the following security vulnerabilities in your Terraform code:\n\n1.  **Overly Permissive Firewall Rule (Critical):** The `google_compute_firewall.allow_all` resource allows inbound traffic on **all TCP ports (0-65535)**. This exposes every service running on your instances to the entire internet, significantly increasing the attack surface.\n2.  **Unrestricted Source Ranges (High):** The `source_ranges = [\"0.0.0.0/0\"]` in the firewall rule allows traffic from any IP address on the internet. Combined with the open ports, this bypasses all network-level access controls.\n3.  **Missing Egress Controls (Medium):** There are no defined egress rules. While GCP has a default allow-egress rule, security best practices dictate implementing \"Least Privilege\" by restricting outbound traffic to known required destinations to prevent data exfiltration.\n4.  **Flow Logs Disabled (Low):** The `google_compute_subnetwork` does not have `log_config` enabled. Without VPC Flow Logs, you lack visibility into network traffic for auditing, incident response, and anomaly detection.\n5.  **Private Google Access Disabled (Low):** The subnetwork does not explicitly set `private_ip_google_access = true`. This forces instances to use external IP addresses or NAT to communicate with Google APIs/services, increasing exposure.\n\n### Recommendations:\n*   Restrict `source_ranges` to specific trusted IP addresses or CIDR blocks.\n*   Open only the specific ports required for your application (e.g., `[\"443\"]`).\n*   Enable `log_config` within the subnetwork for monitoring.\n*   Use Network Tags or Service Accounts in firewall rules instead of broad network-wide application.",
+          "tokenUsage": {
+            "cached": 695,
+            "total": 695
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "9d7988a5-74c0-4bf1-a62c-da0f543a295a",
+        "latencyMs": 42,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nresource \"google_compute_network\" \"vpc\" {\n  name                    = \"terragoat-${var.environment}-network\"\n  description             = \"Virtual vulnerable-by-design network\"\n  auto_create_subnetworks = false\n}\n\nresource \"google_compute_subnetwork\" \"public-subnetwork\" {\n  name          = \"terragoat-${var.environment}-public-subnetwork\"\n  ip_cidr_range = \"10.0.0.0/24\"\n  region        = var.region\n  network       = google_compute_network.vpc.id\n\n  secondary_ip_range {\n    range_name    = \"tf-test-secondary-range-update1\"\n    ip_cidr_range = \"192.168.10.0/24\"\n  }\n}\n\nresource \"google_compute_firewall\" \"allow_all\" {\n  name          = \"terragoat-${var.environment}-firewall\"\n  network       = google_compute_network.vpc.id\n  source_ranges = [\"0.0.0.0/0\"]\n  allow {\n    protocol = \"tcp\"\n    ports    = [\"0-65535\"]\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "1. **Overly Permissive Firewall Rule**: The `allow_all` firewall allows all TCP traffic (ports 0-65535) from any source (`0.0.0.0/0`), exposing all instances to the internet.\n\n2. **No Egress Restrictions**: The firewall lacks explicit egress rules, potentially allowing unrestricted outbound traffic by default.\n\n3. **Non-Specific Naming**: Names like \"allow_all\" and \"Virtual vulnerable-by-design network\" may indicate insecure design intent.\n\n4. **Public Subnet**: The subnetwork uses a public IP range and lacks explicit controls to prevent public exposure.\n\n**Recommendations**: \n- Restrict firewall rules to specific required ports and known IP ranges\n- Implement least-privilege principles\n- Add explicit egress restrictions\n- Avoid public exposure unless absolutely necessary",
+          "tokenUsage": {
+            "cached": 446,
+            "total": 446
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "e99e1ea5-4217-4d38-9fec-74cd79ac779f",
+        "latencyMs": 46,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nprovider \"google\" {\n  credentials = file(var.credentials_path)\n  project = var.project\n  region  = var.region\n}\n\n\nterraform {\n  backend \"gcs\" {\n    credentials = var.credentials_path\n    prefix      = \"terragoat/${var.environment}\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security issues I see:\n\n- **Hard dependency on local credential file**\n  - `credentials = file(var.credentials_path)` reads a service account key from disk.\n  - Risk: key leakage via local filesystem exposure, accidental commit, CI logs, or misconfigured access.\n\n- **Likely use of long-lived static credentials**\n  - Both the provider and GCS backend use a credentials file/path instead of workload identity / ADC / short-lived tokens.\n  - Risk: credentials can be reused if stolen and are harder to rotate safely.\n\n- **Backend credential handling is inconsistent**\n  - `terraform` backend uses `credentials = var.credentials_path`, which is not the typical backend config format for GCS and may indicate the secret path is being passed around insecurely.\n  - Risk: misconfiguration or unintended exposure of the path/secret in state, variables, or automation.\n\n- **Potential secret exposure through Terraform variables/state**\n  - If `var.credentials_path` is not marked sensitive and is passed via TF vars, the path may be visible in plans/logs/state metadata.\n  - Risk: aids discovery of secret locations and operational environment details.\n\nRecommendations:\n- Use **Google Cloud Workload Identity / Application Default Credentials** instead of service account key files.\n- If keys are unavoidable, store them in a secure secret manager and mount/rotate them carefully.\n- Mark sensitive variables appropriately and avoid passing credential file paths through Terraform where possible.",
+          "tokenUsage": {
+            "cached": 380,
+            "total": 380
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\provider.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #6",
+          "metadata": {}
+        },
+        "testIdx": 5,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "a1bdabb9-19d7-44bf-ba3f-cea344094f7d",
+        "latencyMs": 19,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nprovider \"google\" {\n  credentials = file(var.credentials_path)\n  project = var.project\n  region  = var.region\n}\n\n\nterraform {\n  backend \"gcs\" {\n    credentials = var.credentials_path\n    prefix      = \"terragoat/${var.environment}\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, here are the security vulnerabilities identified in the provided Terraform code:\n\n1.  **Hardcoded Credentials (Sensitive Data Exposure):**\n    *   The `credentials = file(var.credentials_path)` line indicates the use of a Service Account JSON key file. Storing and referencing local key files is a high risk for accidental exposure in version control (Git).\n    *   **Recommendation:** Use **Workload Identity Federation** or Application Default Credentials (ADC) to avoid long-lived service account keys.\n\n2.  **Unencrypted State Backend (Potential Exposure):**\n    *   The `gcs` backend configuration does not explicitly define a Customer-Managed Encryption Key (CMEK). While GCS encrypts at rest by default, sensitive infrastructure data (passwords, keys) in the state file should ideally be protected by a managed KMS key.\n    *   **Recommendation:** Use the `encryption_key` parameter in the backend config.\n\n3.  **Lack of State Locking/Access Control:**\n    *   The snippet does not show bucket-level permissions. If the GCS bucket is not properly restricted (e.g., via IAM or Uniform Bucket-Level Access), unauthorized users could read the state file, which contains plain-text secrets.\n    *   **Recommendation:** Ensure the GCS bucket has **Public Access Prevention** enabled and strict IAM policies.\n\n4.  **Variable Interpolation in Backend (Unsupported):**\n    *   `prefix = \"terragoat/${var.environment}\"` is technically invalid in standard Terraform. Terraform backends do not support variables. This often leads developers to use \"wrapper scripts\" that might insecurely inject environment variables or bypass state consistency checks.\n    *   **Recommendation:** Use `.tfvars` files or a partial configuration file (`-backend-config`) to manage environment-specific paths securely.\n\n5.  **Insecure Naming Convention:**\n    *   The prefix `terragoat` suggests the use of a known vulnerable-by-design framework. This signals to attackers that the infrastructure may contain intentional security holes.",
+          "tokenUsage": {
+            "cached": 539,
+            "total": 539
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\provider.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #6",
+          "metadata": {}
+        },
+        "testIdx": 5,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "dac71c17-a7b3-48c7-b51d-64d3bd7bced9",
+        "latencyMs": 24,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nprovider \"google\" {\n  credentials = file(var.credentials_path)\n  project = var.project\n  region  = var.region\n}\n\n\nterraform {\n  backend \"gcs\" {\n    credentials = var.credentials_path\n    prefix      = \"terragoat/${var.environment}\"\n  }\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "1. **Hardcoded Credentials Path**: The `credentials` argument in both provider and backend blocks uses a variable, but storing credentials on disk is insecure. Prefer using environment variables (e.g., `GOOGLE_CREDENTIALS`) or Workload Identity.\n\n2. **Sensitive Data in Backend**: The backend configuration stores credentials path in state, which may expose sensitive information. Use environment variables or omit credentials if using default application credentials.\n\n3. **No Encryption Specified**: The GCS backend doesn't explicitly enable encryption. Add `encryption_key` for customer-managed encryption keys (CMEK).\n\n4. **State File Protection**: The prefix doesn't ensure state isolation. Consider separate GCS buckets per environment for better access control.\n\n5. **Missing Required Providers**: No version constraints specified, which could lead to unexpected breaking changes or vulnerabilities.\n\n**Recommendations**:\n- Use using Workload Identity for GCP authentication",
+          "tokenUsage": {
+            "cached": 313,
+            "total": 313
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\provider.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #6",
+          "metadata": {}
+        },
+        "testIdx": 5,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "901d371e-556b-477d-8a29-72691e593ead",
+        "latencyMs": 28,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nvariable \"credentials_path\" {\n  type        = string\n  description = \"Path to credentials file\"\n}\n\nvariable \"project\" {\n  type        = string\n  description = \"The GCP project to be deployed to\"\n}\n\nvariable \"region\" {\n  default = \"us-central1\"\n  type    = string\n}\n\nvariable \"environment\" {\n  default     = \"dev\"\n  description = \"The environment name\"\n}\n\nvariable \"location\" {\n  default = \"us-central1c\"\n  type    = string\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Security findings in this Terraform snippet:\n\n- **Sensitive credential path exposed via variable**: `credentials_path` is a plain string input. If used later for a service account key file, it may encourage long-lived static credentials instead of safer auth methods (Workload Identity / ADC).\n- **No validation on `project` / `region` / `location` / `environment`**: Unrestricted inputs can lead to misconfiguration, resource sprawl, or deployment into unintended projects/regions.\n- **Hardcoded defaults may cause insecure deployment assumptions**:\n  - `environment = \"dev\"` could accidentally be reused in higher environments if not overridden.\n  - Fixed `region` / `location` may conflict with data residency or compliance requirements.\n- **Potential availability risk from zone-specific default**: `location = \"us-central1c\"` pins to a single zone, reducing resilience if used for critical resources.\n\nNo direct secret leakage is visible in this snippet, but the credential handling pattern is a potential security concern.",
+          "tokenUsage": {
+            "cached": 347,
+            "total": 347
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\variables.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #7",
+          "metadata": {}
+        },
+        "testIdx": 6,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "dbdc2b1d-a92e-4c32-a761-872488b72d89",
+        "latencyMs": 33,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nvariable \"credentials_path\" {\n  type        = string\n  description = \"Path to credentials file\"\n}\n\nvariable \"project\" {\n  type        = string\n  description = \"The GCP project to be deployed to\"\n}\n\nvariable \"region\" {\n  default = \"us-central1\"\n  type    = string\n}\n\nvariable \"environment\" {\n  default     = \"dev\"\n  description = \"The environment name\"\n}\n\nvariable \"location\" {\n  default = \"us-central1c\"\n  type    = string\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "As a cloud security expert, I have reviewed the provided Terraform snippet. While this code primarily defines variables, there are several security concerns regarding **Secret Management** and **Infrastructure Hardening**:\n\n### 1. Hardcoded Credentials Risk (`credentials_path`)\n*   **Vulnerability:** The variable `credentials_path` suggests the use of a local JSON key file for the Google provider.\n*   **Risk:** Storing service account keys on local disk or passing them via CLI increases the risk of accidental exposure in version control (Git), logs, or CI/CD artifacts.\n*   **Recommendation:** Use **Workload Identity Federation** (preferred) or environment variables (`GOOGLE_APPLICATION_CREDENTIALS`) instead of hardcoding paths in Terraform variables.\n\n### 2. Lack of Validation (Injection Risk)\n*   **Vulnerability:** The `project` and `environment` variables lack validation rules.\n*   **Risk:** Malicious or malformed strings could lead to unexpected resource naming or \"injection\" style misconfigurations if these variables are interpolated into sensitive resource fields.\n*   **Recommendation:** Add `validation` blocks using regex to ensure the strings follow expected patterns (e.g., alphanumeric only).\n\n### 3. Over-Privileged Default Region/Zone\n*   **Vulnerability:** Defaulting to `us-central1` is a common pattern, but it may not align with data residency requirements.\n*   **Risk:** If this is a production environment, deploying to a default region without explicit intent can violate compliance frameworks (e.g., GDPR, HIPAA) regarding where data must reside.\n*   **Recommendation:** Remove defaults for production environments to force the developer to explicitly define the target region.\n\n### 4. Missing Sensitive Flag\n*   **Vulnerability:** If `credentials_path` or `project` IDs are considered sensitive in your threat model, they are not marked as such.\n*   **Risk:** Terraform will print these values in clear text to the console during `plan` and `apply` operations.\n*   **Recommendation:** Use `sensitive = true` for any variable that contains identifying or secret information to redact it from console output.\n\n### 5. State File Exposure (Contextual)\n*   **Vulnerability:** While not visible in the code, the use of these variables implies the creation of a state file.\n*   **Risk:** If the `credentials_path` is used to initialize the provider, the resulting `terraform.tfstate` may contain sensitive metadata about the project environment.\n*   **Recommendation:** Ensure a secure **Remote Backend** (like GCS) is used with encryption and restricted access (IAM) enabled.",
+          "tokenUsage": {
+            "cached": 709,
+            "total": 709
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\variables.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #7",
+          "metadata": {}
+        },
+        "testIdx": 6,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "8a4c3f35-d292-4027-8722-b7ccf687745f",
+        "latencyMs": 7,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\nvariable \"credentials_path\" {\n  type        = string\n  description = \"Path to credentials file\"\n}\n\nvariable \"project\" {\n  type        = string\n  description = \"The GCP project to be deployed to\"\n}\n\nvariable \"region\" {\n  default = \"us-central1\"\n  type    = string\n}\n\nvariable \"environment\" {\n  default     = \"dev\"\n  description = \"The environment name\"\n}\n\nvariable \"location\" {\n  default = \"us-central1c\"\n  type    = string\n}",
+          "label": "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}",
+          "config": {}
+        },
+        "promptId": "e1fd9e6db6944dfcf652e1c21169abd0f7334de5397d2350a4cc561d6a673986",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "**Security Vulnerabilities:**\n\n1.  **Hardcoded Credentials Path:** The `credentials_path` variable is a high-risk input. If a local file path is passed, it could expose sensitive service account keys in the Terraform state or logs. **Never** pass raw credential file paths in production.\n2.  **Missing Validation:** No validation on the `project` or `credentials_path` variables. This could lead to deployment to the wrong project or use of incorrect credentials.\n3.  **Sensitive Variable Exposure:** The `credentials_path` variable value (which likely contains a path to a key file) may be printed in plan/apply outputs or stored in plaintext in the Terraform state if not marked as `sensitive`.\n4.  **Default Region/Zones:** Using a default `region` and `location` (zone) is not inherently a vulnerability, but it can lead to misconfiguration if the defaults are not appropriate for the organization's compliance or data residency requirements.\n\n**Key Recommendations:**\n*   **Do not use static credential files.** Use Google Cloud Application Default Credentials (ADC) or workload identity federation.\n*   **Mark the `credentials_path` variable as `sensitive = true`** if you must use it.\n*   **Add validation blocks** (e.g., `validation {}`) for `project` to ensure correct naming conventions.\n*   **Remove the `credentials_path` variable entirely** and rely on secure authentication methods provided by the `google` provider (e.g., `GOOGLE_APPLICATION_CREDENTIALS` environment variable).",
+          "tokenUsage": {
+            "cached": 465,
+            "total": 465
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\variables.tf",
+            "assert_rubric": "Must identify the primary security misconfigurations"
+          },
+          "assert": [],
+          "options": {},
+          "description": "Row #7",
+          "metadata": {}
+        },
+        "testIdx": 6,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 21,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 12157,
+        "total": 12157,
+        "numRequests": 21,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      },
+      "durationMs": 516,
+      "evaluationDurationMs": 516
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Terraform Vulnerability Detection Benchmark - GCP",
+    "prompts": [
+      "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}"
+    ],
+    "providers": [
+      "openrouter:openai/gpt-5.4-mini",
+      "openrouter:google/gemini-3-flash-preview",
+      "openrouter:deepseek/deepseek-chat-v3.1"
+    ],
+    "tests": [
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/big_data.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #1"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/gcs.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #2"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/gke.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #3"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/instances.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #4"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/networks.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #5"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/provider.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #6"
+      },
+      {
+        "vars": {
+          "terraform_code": "file://terragoat/terraform/gcp/variables.tf",
+          "assert_rubric": "Must identify the primary security misconfigurations"
+        },
+        "assert": [],
+        "options": {},
+        "description": "Row #7"
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "outputPath": [
+      "results_gcp.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.3",
+    "nodeVersion": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "exportedAt": "2026-04-08T19:00:57.908Z",
+    "evaluationCreatedAt": "2026-04-08T19:00:56.985Z"
+  }
+}

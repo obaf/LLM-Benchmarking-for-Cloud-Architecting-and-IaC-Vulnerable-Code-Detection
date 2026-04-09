@@ -1,0 +1,8 @@
+description: "Terraform Vulnerability Detection Benchmark"
+prompts:
+  - "You are a cloud security expert. Review the following Terraform code and list any security vulnerabilities you find. Be concise. \n\n{{terraform_code}}"
+providers:
+  - openrouter:openai/gpt-5.4-mini
+  - openrouter:google/gemini-3-flash-preview
+  - openrouter:deepseek/deepseek-chat-v3.1
+tests: tests.csv

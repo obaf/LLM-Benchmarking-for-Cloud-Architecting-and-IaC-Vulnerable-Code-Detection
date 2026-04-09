@@ -1,0 +1,31 @@
+description: "Terraform Vulnerability Detection Benchmark - Medium Mode"
+prompts:
+  - |
+    You are a cloud security expert analyzing Infrastructure as Code.
+    Your task is to review the following Terraform code and identify any security misconfigurations.
+    
+    You must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.
+    You must also provide syntactically valid Terraform HCL code that remediates the issue.
+    
+    You MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:
+    {
+      "vulnerabilities": ["CKV_AWS_123", "..."],
+      "remediation_code": "resource \"aws_s3_bucket\" {\n  # valid HCL fix\n}"
+    }
+    
+    Terraform Code:
+    {{terraform_code}}
+providers:
+  - id: openrouter:openai/gpt-5.4-mini
+    config:
+      timeout: 30000
+  - id: openrouter:google/gemini-3-flash-preview
+    config:
+      timeout: 30000
+  - id: openrouter:deepseek/deepseek-chat-v3.1
+    config:
+      timeout: 60000
+defaultTest:
+  assert:
+    - type: python
+      value: file://validate_output.py

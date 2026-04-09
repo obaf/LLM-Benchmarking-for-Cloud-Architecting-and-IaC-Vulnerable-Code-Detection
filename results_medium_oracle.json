@@ -1,0 +1,1206 @@
+{
+  "evalId": "eval-Egi-2026-04-08T20:51:24",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-04-08T20:51:24.223Z",
+    "prompts": [
+      {
+        "id": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "provider": "openrouter:openai/gpt-5.4-mini",
+        "metrics": {
+          "score": 0,
+          "testPassCount": 0,
+          "testFailCount": 4,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 4,
+          "totalLatencyMs": 12650,
+          "tokenUsage": {
+            "prompt": 1775,
+            "completion": 1389,
+            "cached": 0,
+            "total": 3164,
+            "numRequests": 4,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "provider": "openrouter:google/gemini-3-flash-preview",
+        "metrics": {
+          "score": 0.5833333333333333,
+          "testPassCount": 2,
+          "testFailCount": 2,
+          "testErrorCount": 0,
+          "assertPassCount": 2,
+          "assertFailCount": 2,
+          "totalLatencyMs": 14461,
+          "tokenUsage": {
+            "prompt": 2157,
+            "completion": 1702,
+            "cached": 0,
+            "total": 3859,
+            "numRequests": 4,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "provider": "openrouter:deepseek/deepseek-chat-v3.1",
+        "metrics": {
+          "score": 0,
+          "testPassCount": 0,
+          "testFailCount": 4,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 4,
+          "totalLatencyMs": 60939,
+          "tokenUsage": {
+            "prompt": 1875,
+            "completion": 1559,
+            "cached": 0,
+            "total": 3434,
+            "numRequests": 4,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_14', 'CKV_ALI_15', 'CKV_ALI_19', 'CKV_ALI_21']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_14', 'CKV_ALI_15', 'CKV_ALI_19', 'CKV_ALI_21']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_14', 'CKV_ALI_15', 'CKV_ALI_19', 'CKV_ALI_21']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "a6fbd068-701b-4caf-a8f7-2df5c22f476a",
+        "latencyMs": 3597,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_oss_bucket\" \"bad_bucket\" {\n  # Public and writeable bucket \n  # Versioning isn't enabled\n  # Not Encrypted with a Customer Master Key and no Server side encryption\n  # Doesn't have access logging enabled\" \n  bucket = \"wildwestfreeforall\"\n  acl    = \"public-read-write\"\n  tags = {\n    git_commit           = \"9c114f23d311f787c137723e1f71b27a52f0adec\"\n    git_file             = \"terraform/alicloud/bucket.tf\"\n    git_last_modified_at = \"2022-04-05 15:17:55\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"80373049-248d-4f5e-9d25-740c3e80f2b9\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_ALI_14\",\n    \"CKV_ALI_15\",\n    \"CKV_ALI_19\",\n    \"CKV_ALI_21\"\n  ],\n  \"remediation_code\": \"resource \\\"alicloud_oss_bucket\\\" \\\"bad_bucket\\\" {\\n  bucket = \\\"wildwestfreeforall\\\"\\n  acl    = \\\"private\\\"\\n\\n  versioning {\\n    status = \\\"Enabled\\\"\\n  }\\n\\n  server_side_encryption_rule {\\n    sse_algorithm = \\\"AES256\\\"\\n  }\\n\\n  logging {\\n    target_bucket = \\\"log-bucket-name\\\"\\n    target_prefix = \\\"log/\\\"\\n  }\\n\\n  tags = {\\n    git_commit           = \\\"9c114f23d311f787c137723e1f71b27a52f0adec\\\"\\n    git_file             = \\\"terraform/alicloud/bucket.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:17:55\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"80373049-248d-4f5e-9d25-740c3e80f2b9\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 850,
+            "prompt": 462,
+            "completion": 388,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\bucket.tf",
+            "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\bucket.tf",
+          "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_2', 'CKV_ALI_3', 'CKV_ALI_4']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_2', 'CKV_ALI_3', 'CKV_ALI_4']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_2', 'CKV_ALI_3', 'CKV_ALI_4']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "21c2d121-bf43-4a1b-bb3c-fe0aabd635d1",
+        "latencyMs": 4436,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_oss_bucket\" \"bad_bucket\" {\n  # Public and writeable bucket \n  # Versioning isn't enabled\n  # Not Encrypted with a Customer Master Key and no Server side encryption\n  # Doesn't have access logging enabled\" \n  bucket = \"wildwestfreeforall\"\n  acl    = \"public-read-write\"\n  tags = {\n    git_commit           = \"9c114f23d311f787c137723e1f71b27a52f0adec\"\n    git_file             = \"terraform/alicloud/bucket.tf\"\n    git_last_modified_at = \"2022-04-05 15:17:55\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"80373049-248d-4f5e-9d25-740c3e80f2b9\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_ALI_2\", \"CKV_ALI_3\", \"CKV_ALI_4\"],\n  \"remediation_code\": \"resource \\\"alicloud_oss_bucket\\\" \\\"good_bucket\\\" {\\n  bucket = \\\"wildwestfreeforall-secure\\\"\\n  acl    = \\\"private\\\"\\n\\n  server_side_encryption_rule {\\n    sse_algorithm = \\\"AES256\\\"\\n  }\\n\\n  versioning {\\n    status = \\\"Enabled\\\"\\n  }\\n\\n  logging {\\n    target_bucket = \\\"logs-bucket\\\"\\n    target_prefix = \\\"oss-access-logs/\\\"\\n  }\\n\\n  tags = {\\n    git_commit           = \\\"9c114f23d311f787c137723e1f71b27a52f0adec\\\"\\n    git_file             = \\\"terraform/alicloud/bucket.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:17:55\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"80373049-248d-4f5e-9d25-740c3e80f2b9\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 695,
+            "prompt": 381,
+            "completion": 314,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\bucket.tf",
+            "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\bucket.tf",
+          "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_2', 'CKV_ALI_3', 'CKV_ALI_4', 'CKV_ALI_5']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_2', 'CKV_ALI_3', 'CKV_ALI_4', 'CKV_ALI_5']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_6']. Found: ['CKV_ALI_2', 'CKV_ALI_3', 'CKV_ALI_4', 'CKV_ALI_5']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "cba2f81e-2150-4dc0-af9b-4e6e70995e2f",
+        "latencyMs": 21664,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_oss_bucket\" \"bad_bucket\" {\n  # Public and writeable bucket \n  # Versioning isn't enabled\n  # Not Encrypted with a Customer Master Key and no Server side encryption\n  # Doesn't have access logging enabled\" \n  bucket = \"wildwestfreeforall\"\n  acl    = \"public-read-write\"\n  tags = {\n    git_commit           = \"9c114f23d311f787c137723e1f71b27a52f0adec\"\n    git_file             = \"terraform/alicloud/bucket.tf\"\n    git_last_modified_at = \"2022-04-05 15:17:55\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"80373049-248d-4f5e-9d25-740c3e80f2b9\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_ALI_2\", \"CKV_ALI_3\", \"CKV_ALI_4\", \"CKV_ALI_5\"],\n  \"remediation_code\": \"resource \\\"alicloud_oss_bucket\\\" \\\"bad_bucket\\\" {\\n  bucket = \\\"wildwestfreeforall\\\"\\n  acl    = \\\"private\\\"\\n  \\n  versioning {\\n    status = \\\"Enabled\\\"\\n  }\\n  \\n  server_side_encryption_rule {\\n    sse_algorithm = \\\"AES256\\\"\\n  }\\n  \\n  logging {\\n    target_bucket = alicloud_oss_bucket.log_bucket.id\\n    target_prefix = \\\"log/\\\"\\n  }\\n  \\n  tags = {\\n    git_commit           = \\\"9c114f23d311f787c137723e1f71b27a52f0adec\\\"\\n    git_file             = \\\"terraform/alicloud/bucket.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:17:55\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"80373049-248d-4f5e-9d25-740c3e80f2b9\\\"\\n  }\\n}\\n\\nresource \\\"alicloud_oss_bucket\\\" \\\"log_bucket\\\" {\\n  bucket = \\\"access-logs-bucket\\\"\\n  acl    = \\\"private\\\"\\n}\"\n}",
+          "tokenUsage": {
+            "total": 802,
+            "prompt": 402,
+            "completion": 400,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\bucket.tf",
+            "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\bucket.tf",
+          "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_AWS_23']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_AWS_23']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_AWS_23']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "a72194c2-91a6-43d9-9014-c0cea349ddbe",
+        "latencyMs": 2601,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_db_instance\" \"seeme\" {\n  # Is public due to Security IPS 0.0.0.0/0\n  engine           = \"MySQL\"\n  engine_version   = \"5.6\"\n  instance_type    = \"rds.mysql.t1.small\"\n  instance_storage = \"10\"\n  tde_status       = \"Enabled\"\n  security_ips = [\n    \"0.0.0.0\",\n    \"10.23.12.24/24\"\n  ]\n  parameters {\n    name  = \"innodb_large_prefix\"\n    value = \"ON\"\n  }\n  parameters {\n    name  = \"connect_timeout\"\n    value = \"50\"\n  }\n  tags = {\n    git_commit           = \"c2ff052009d49c65e6af551eb1506abc73b5976c\"\n    git_file             = \"terraform/alicloud/rds.tf\"\n    git_last_modified_at = \"2022-04-05 15:14:28\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"7bd1394e-0a79-4288-8f83-5abcca5bf1ba\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_AWS_23\"],\n  \"remediation_code\": \"resource \\\"alicloud_db_instance\\\" \\\"seeme\\\" {\\n  engine           = \\\"MySQL\\\"\\n  engine_version   = \\\"5.6\\\"\\n  instance_type    = \\\"rds.mysql.t1.small\\\"\\n  instance_storage = \\\"10\\\"\\n  tde_status       = \\\"Enabled\\\"\\n\\n  security_ips = [\\n    \\\"10.23.12.24/24\\\"\\n  ]\\n\\n  parameters {\\n    name  = \\\"innodb_large_prefix\\\"\\n    value = \\\"ON\\\"\\n  }\\n\\n  parameters {\\n    name  = \\\"connect_timeout\\\"\\n    value = \\\"50\\\"\\n  }\\n\\n  tags = {\\n    git_commit           = \\\"c2ff052009d49c65e6af551eb1506abc73b5976c\\\"\\n    git_file             = \\\"terraform/alicloud/rds.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:14:28\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"7bd1394e-0a79-4288-8f83-5abcca5bf1ba\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 783,
+            "prompt": 455,
+            "completion": 328,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\rds.tf",
+            "expected_ids": "CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\rds.tf",
+          "expected_ids": "CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_ALI_17']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_ALI_17']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_ALI_17']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "49cc3ebf-2668-4af1-aac7-28f6e1d826fc",
+        "latencyMs": 3185,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_db_instance\" \"seeme\" {\n  # Is public due to Security IPS 0.0.0.0/0\n  engine           = \"MySQL\"\n  engine_version   = \"5.6\"\n  instance_type    = \"rds.mysql.t1.small\"\n  instance_storage = \"10\"\n  tde_status       = \"Enabled\"\n  security_ips = [\n    \"0.0.0.0\",\n    \"10.23.12.24/24\"\n  ]\n  parameters {\n    name  = \"innodb_large_prefix\"\n    value = \"ON\"\n  }\n  parameters {\n    name  = \"connect_timeout\"\n    value = \"50\"\n  }\n  tags = {\n    git_commit           = \"c2ff052009d49c65e6af551eb1506abc73b5976c\"\n    git_file             = \"terraform/alicloud/rds.tf\"\n    git_last_modified_at = \"2022-04-05 15:14:28\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"7bd1394e-0a79-4288-8f83-5abcca5bf1ba\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_ALI_17\"\n  ],\n  \"remediation_code\": \"resource \\\"alicloud_db_instance\\\" \\\"seeme\\\" {\\n  engine           = \\\"MySQL\\\"\\n  engine_version   = \\\"5.6\\\"\\n  instance_type    = \\\"rds.mysql.t1.small\\\"\\n  instance_storage = \\\"10\\\"\\n  tde_status       = \\\"Enabled\\\"\\n  # Restrict access to specific internal IP ranges instead of 0.0.0.0\\n  security_ips = [\\n    \\\"10.23.12.24/24\\\"\\n  ]\\n  parameters {\\n    name  = \\\"innodb_large_prefix\\\"\\n    value = \\\"ON\\\"\\n  }\\n  parameters {\\n    name  = \\\"connect_timeout\\\"\\n    value = \\\"50\\\"\\n  }\\n  tags = {\\n    git_commit           = \\\"c2ff052009d49c65e6af551eb1506abc73b5976c\\\"\\n    git_file             = \\\"terraform/alicloud/rds.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:14:28\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"7bd1394e-0a79-4288-8f83-5abcca5bf1ba\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 963,
+            "prompt": 553,
+            "completion": 410,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\rds.tf",
+            "expected_ids": "CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\rds.tf",
+          "expected_ids": "CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_ALI_2']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_ALI_2']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_20', 'CKV_ALI_25', 'CKV_ALI_30', 'CKV_ALI_35', 'CKV_ALI_36', 'CKV_ALI_37', 'CKV_ALI_9']. Found: ['CKV_ALI_2']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "6e369ad1-e064-4da3-a408-30dc1ecbe038",
+        "latencyMs": 19745,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_db_instance\" \"seeme\" {\n  # Is public due to Security IPS 0.0.0.0/0\n  engine           = \"MySQL\"\n  engine_version   = \"5.6\"\n  instance_type    = \"rds.mysql.t1.small\"\n  instance_storage = \"10\"\n  tde_status       = \"Enabled\"\n  security_ips = [\n    \"0.0.0.0\",\n    \"10.23.12.24/24\"\n  ]\n  parameters {\n    name  = \"innodb_large_prefix\"\n    value = \"ON\"\n  }\n  parameters {\n    name  = \"connect_timeout\"\n    value = \"50\"\n  }\n  tags = {\n    git_commit           = \"c2ff052009d49c65e6af551eb1506abc73b5976c\"\n    git_file             = \"terraform/alicloud/rds.tf\"\n    git_last_modified_at = \"2022-04-05 15:14:28\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"7bd1394e-0a79-4288-8f83-5abcca5bf1ba\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_ALI_2\"],\n  \"remediation_code\": \"resource \\\"alicloud_db_instance\\\" \\\"seeme\\\" {\\n  engine           = \\\"MySQL\\\"\\n  engine_version   = \\\"5.6\\\"\\n  instance_type    = \\\"rds.mysql.t1.small\\\"\\n  instance_storage = \\\"10\\\"\\n  tde_status       = \\\"Enabled\\\"\\n  security_ips = [\\n    \\\"10.23.12.24/24\\\"\\n  ]\\n  parameters {\\n    name  = \\\"innodb_large_prefix\\\"\\n    value = \\\"ON\\\"\\n  }\\n  parameters {\\n    name  = \\\"connect_timeout\\\"\\n    value = \\\"50\\\"\\n  }\\n  tags = {\\n    git_commit           = \\\"c2ff052009d49c65e6af551eb1506abc73b5976c\\\"\\n    git_file             = \\\"terraform/alicloud/rds.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:14:28\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_orgabcca5bf1ba\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 828,
+            "prompt": 474,
+            "completion": 354,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\rds.tf",
+            "expected_ids": "CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\rds.tf",
+          "expected_ids": "CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_4', 'CKV_ALI_5', 'CKV_ALI_6']. Found: ['CKV_AZURE_33', 'CKV_ALI_1']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_4', 'CKV_ALI_5', 'CKV_ALI_6']. Found: ['CKV_AZURE_33', 'CKV_ALI_1']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_4', 'CKV_ALI_5', 'CKV_ALI_6']. Found: ['CKV_AZURE_33', 'CKV_ALI_1']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "364424bf-b10b-44d3-94bb-8812e461e5c5",
+        "latencyMs": 2929,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_actiontrail_trail\" \"fail\" {\n  # Action Trail not Logging for all regions\n  # Action Trail not Logging for all events\n  trail_name         = \"action-trail\"\n  oss_write_role_arn = alicloud_ram_role.trail.arn\n  oss_bucket_name    = alicloud_oss_bucket.trail.bucket\n  event_rw           = \"Read\"\n  trail_region       = \"cn-hangzhou\"\n}\n\nresource \"alicloud_oss_bucket\" \"trail\" {\n\n  tags = {\n    git_commit           = \"c2ff052009d49c65e6af551eb1506abc73b5976c\"\n    git_file             = \"terraform/alicloud/trail.tf\"\n    git_last_modified_at = \"2022-04-05 15:14:28\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"9ce7077b-8195-4e71-aec6-ed1f769555dc\"\n  }\n}\n\nresource \"alicloud_ram_role\" \"trail\" {\n  name     = \"trail\"\n  document = <<EOF\n  {\n    \"Statement\": [\n      {\n        \"Action\": \"sts:AssumeRole\",\n        \"Effect\": \"Allow\",\n        \"Principal\": {\n          \"Service\": [\n            \"actiontrail.aliyuncs.com\"\n          ]\n        }\n      }\n    ],\n    \"Version\": \"1\"\n  }\n  EOF\n  force    = true\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_AZURE_33\", \"CKV_ALI_1\"],\n  \"remediation_code\": \"resource \\\"alicloud_actiontrail_trail\\\" \\\"fixed\\\" {\\n  trail_name         = \\\"action-trail\\\"\\n  oss_write_role_arn = alicloud_ram_role.trail.arn\\n  oss_bucket_name    = alicloud_oss_bucket.trail.bucket\\n  event_rw           = \\\"All\\\"\\n  trail_region       = \\\"All\\\"\\n}\\n\\nresource \\\"alicloud_oss_bucket\\\" \\\"trail\\\" {\\n  acl = \\\"private\\\"\\n\\n  server_side_encryption_rule {\\n    sse_algorithm = \\\"AES256\\\"\\n  }\\n\\n  versioning {\\n    status = \\\"Enabled\\\"\\n  }\\n\\n  tags = {\\n    git_commit           = \\\"c2ff052009d49c65e6af551eb1506abc73b5976c\\\"\\n    git_file             = \\\"terraform/alicloud/trail.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:14:28\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"9ce7077b-8195-4e71-aec6-ed1f769555dc\\\"\\n  }\\n}\\n\\nresource \\\"alicloud_ram_role\\\" \\\"trail\\\" {\\n  name     = \\\"trail\\\"\\n  document = <<EOF\\n  {\\n    \\\"Statement\\\": [\\n      {\\n        \\\"Action\\\": \\\"sts:AssumeRole\\\",\\n        \\\"Effect\\\": \\\"Allow\\\",\\n        \\\"Principal\\\": {\\n          \\\"Service\\\": [\\n            \\\"actiontrail.aliyuncs.com\\\"\\n          ]\\n        }\\n      }\\n    ],\\n    \\\"Version\\\": \\\"1\\\"\\n  }\\n  EOF\\n  force = true\\n}\"\n}",
+          "tokenUsage": {
+            "total": 955,
+            "prompt": 508,
+            "completion": 447,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\trail.tf",
+            "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\trail.tf",
+          "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_4', 'CKV_ALI_5', 'CKV_ALI_6']. Found: ['CKV_ALI_1', 'CKV_ALI_2']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_4', 'CKV_ALI_5', 'CKV_ALI_6']. Found: ['CKV_ALI_1', 'CKV_ALI_2']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_ALI_10', 'CKV_ALI_11', 'CKV_ALI_12', 'CKV_ALI_4', 'CKV_ALI_5', 'CKV_ALI_6']. Found: ['CKV_ALI_1', 'CKV_ALI_2']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "1fa2ac71-5473-4cdc-8127-f30de87e53b1",
+        "latencyMs": 13903,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_actiontrail_trail\" \"fail\" {\n  # Action Trail not Logging for all regions\n  # Action Trail not Logging for all events\n  trail_name         = \"action-trail\"\n  oss_write_role_arn = alicloud_ram_role.trail.arn\n  oss_bucket_name    = alicloud_oss_bucket.trail.bucket\n  event_rw           = \"Read\"\n  trail_region       = \"cn-hangzhou\"\n}\n\nresource \"alicloud_oss_bucket\" \"trail\" {\n\n  tags = {\n    git_commit           = \"c2ff052009d49c65e6af551eb1506abc73b5976c\"\n    git_file             = \"terraform/alicloud/trail.tf\"\n    git_last_modified_at = \"2022-04-05 15:14:28\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"9ce7077b-8195-4e71-aec6-ed1f769555dc\"\n  }\n}\n\nresource \"alicloud_ram_role\" \"trail\" {\n  name     = \"trail\"\n  document = <<EOF\n  {\n    \"Statement\": [\n      {\n        \"Action\": \"sts:AssumeRole\",\n        \"Effect\": \"Allow\",\n        \"Principal\": {\n          \"Service\": [\n            \"actiontrail.aliyuncs.com\"\n          ]\n        }\n      }\n    ],\n    \"Version\": \"1\"\n  }\n  EOF\n  force    = true\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "```json\n{\n  \"vulnerabilities\": [\"CKV_ALI_1\", \"CKV_ALI_2\"],\n  \"remediation_code\": \"resource \\\"alicloud_actiontrail_trail\\\" \\\"fail\\\" {\\n  trail_name         = \\\"action-trail\\\"\\n  oss_write_role_arn = alicloud_ram_role.trail.arn\\n  oss_bucket_name    = alicloud_oss_bucket.trail.bucket\\n  event_rw           = \\\"All\\\"\\n  trail_region       = \\\"All\\\"\\n  sls_project_arn    = \\\"\\\"\\n  sls_write_role_arn = \\\"\\\"\\n}\\n\\nresource \\\"alicloud_oss_bucket\\\" \\\"trail\\\" {\\n  bucket = \\\"example-bucket-name\\\"\\n  acl    = \\\"private\\\"\\n  \\n  tags = {\\n    git_commit           = \\\"c2ff052009d49c65e6af551eb1506abc73b5976c\\\"\\n    git_file             = \\\"terraform/alicloud/trail.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:14:28\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"9ce7077b-8195-4e71-aec6-ed1f769555dc\\\"\\n  }\\n}\\n\\nresource \\\"alicloud_ram_role\\\" \\\"trail\\\" {\\n  name     = \\\"trail\\\"\\n  document = <<EOF\\n  {\\n    \\\"Statement\\\": [\\n      {\\n        \\\"Action\\\": \\\"sts:AssumeRole\\\",\\n        \\\"Effect\\\": \\\"Allow\\\",\\n        \\\"Principal\\\": {\\n          \\\"Service\\\": [\\n            \\\"actiontrail.aliyuncs.com\\\"\\n          ]\\n        }\\n      }\\n    ],\\n    \\\"Version\\\": \\\"1\\\"\\n  }\\n  EOF\\n  force    = true\\n}\"\n}\n```",
+          "tokenUsage": {
+            "total": 1038,
+            "prompt": 542,
+            "completion": 496,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\trail.tf",
+            "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\trail.tf",
+          "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.3333333333333333,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.3333333333333333,
+              "reason": "Successfully identified ['CKV_ALI_11', 'CKV_ALI_12'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "4fe3f757-c5f9-42a7-bcf7-4fa262df906e",
+        "latencyMs": 4099,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"alicloud_actiontrail_trail\" \"fail\" {\n  # Action Trail not Logging for all regions\n  # Action Trail not Logging for all events\n  trail_name         = \"action-trail\"\n  oss_write_role_arn = alicloud_ram_role.trail.arn\n  oss_bucket_name    = alicloud_oss_bucket.trail.bucket\n  event_rw           = \"Read\"\n  trail_region       = \"cn-hangzhou\"\n}\n\nresource \"alicloud_oss_bucket\" \"trail\" {\n\n  tags = {\n    git_commit           = \"c2ff052009d49c65e6af551eb1506abc73b5976c\"\n    git_file             = \"terraform/alicloud/trail.tf\"\n    git_last_modified_at = \"2022-04-05 15:14:28\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"9ce7077b-8195-4e71-aec6-ed1f769555dc\"\n  }\n}\n\nresource \"alicloud_ram_role\" \"trail\" {\n  name     = \"trail\"\n  document = <<EOF\n  {\n    \"Statement\": [\n      {\n        \"Action\": \"sts:AssumeRole\",\n        \"Effect\": \"Allow\",\n        \"Principal\": {\n          \"Service\": [\n            \"actiontrail.aliyuncs.com\"\n          ]\n        }\n      }\n    ],\n    \"Version\": \"1\"\n  }\n  EOF\n  force    = true\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_ALI_11\",\n    \"CKV_ALI_12\"\n  ],\n  \"remediation_code\": \"resource \\\"alicloud_actiontrail_trail\\\" \\\"fail\\\" {\\n  trail_name         = \\\"action-trail\\\"\\n  oss_write_role_arn = alicloud_ram_role.trail.arn\\n  oss_bucket_name    = alicloud_oss_bucket.trail.bucket\\n  event_rw           = \\\"All\\\"\\n  trail_region       = \\\"All\\\"\\n}\\n\\nresource \\\"alicloud_oss_bucket\\\" \\\"trail\\\" {\\n  bucket = \\\"action-trail-bucket\\\"\\n  tags = {\\n    git_commit           = \\\"c2ff052009d49c65e6af551eb1506abc73b5976c\\\"\\n    git_file             = \\\"terraform/alicloud/trail.tf\\\"\\n    git_last_modified_at = \\\"2022-04-05 15:14:28\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"9ce7077b-8195-4e71-aec6-ed1f769555dc\\\"\\n  }\\n}\\n\\nresource \\\"alicloud_ram_role\\\" \\\"trail\\\" {\\n  name     = \\\"trail\\\"\\n  document = <<EOF\\n  {\\n    \\\"Statement\\\": [\\n      {\\n        \\\"Action\\\": \\\"sts:AssumeRole\\\",\\n        \\\"Effect\\\": \\\"Allow\\\",\\n        \\\"Principal\\\": {\\n          \\\"Service\\\": [\\n            \\\"actiontrail.aliyuncs.com\\\"\\n          ]\\n        }\\n      }\\n    ],\\n    \\\"Version\\\": \\\"1\\\"\\n  }\\n  EOF\\n  force    = true\\n}\"\n}",
+          "tokenUsage": {
+            "total": 1109,
+            "prompt": 617,
+            "completion": 492,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.3333333333333333,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\alicloud\\trail.tf",
+            "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\alicloud\\trail.tf",
+          "expected_ids": "CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_OCI_10', 'CKV_OCI_7', 'CKV_OCI_8', 'CKV_OCI_9']. Found: ['CKV_OCI_5', 'CKV_OCI_3']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_OCI_10', 'CKV_OCI_7', 'CKV_OCI_8', 'CKV_OCI_9']. Found: ['CKV_OCI_5', 'CKV_OCI_3']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_OCI_10', 'CKV_OCI_7', 'CKV_OCI_8', 'CKV_OCI_9']. Found: ['CKV_OCI_5', 'CKV_OCI_3']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "6402b426-1ca3-419d-8c3d-f8b4e287d3e0",
+        "latencyMs": 2684,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"oci_objectstorage_bucket\" \"secretsquirrel\" {\n  # bucket can't emit object events\n  # Storage hasn't versioning enabled\n  # Storage isn't encrypted with Customer Managed Key\n  # Object Storage is Public\"\n  compartment_id        = oci_identity_compartment.tf-compartment.id\n  name                  = \"myreallysecretstore\"\n  namespace             = data.oci_objectstorage_namespace.example.namespace\n  object_events_enabled = false\n  access_type           = \"ObjectRead\"\n  metadata              = { \"data\" = \"Blockofdata\" }\n  storage_tier          = \"Standard\"\n  freeform_tags = {\n    git_commit           = \"7a7b957091945f77ecef712a92ac719c8d9a6498\"\n    git_file             = \"terraform/oracle/bucket.tf\"\n    git_last_modified_at = \"2022-04-06 10:43:57\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"a854aa89-5141-4518-a5dc-0ffe3075f209\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_OCI_5\", \"CKV_OCI_3\"],\n  \"remediation_code\": \"resource \\\"oci_objectstorage_bucket\\\" \\\"secretsquirrel\\\" {\\n  compartment_id        = oci_identity_compartment.tf-compartment.id\\n  name                  = \\\"myreallysecretstore\\\"\\n  namespace             = data.oci_objectstorage_namespace.example.namespace\\n  object_events_enabled = true\\n  access_type           = \\\"NoPublicAccess\\\"\\n  metadata              = { \\\"data\\\" = \\\"Blockofdata\\\" }\\n  storage_tier          = \\\"Standard\\\"\\n\\n  freeform_tags = {\\n    git_commit           = \\\"7a7b957091945f77ecef712a92ac719c8d9a6498\\\"\\n    git_file             = \\\"terraform/oracle/bucket.tf\\\"\\n    git_last_modified_at = \\\"2022-04-06 10:43:57\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"a854aa89-5141-4518-a5dc-0ffe3075f209\\\"\\n  }\\n}\\n\"\n}",
+          "tokenUsage": {
+            "total": 731,
+            "prompt": 431,
+            "completion": 300,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+            "expected_ids": "CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+          "expected_ids": "CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_OCI_10', 'CKV_OCI_7', 'CKV_OCI_8', 'CKV_OCI_9']. Found: ['CKV_OCI_1']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_OCI_10', 'CKV_OCI_7', 'CKV_OCI_8', 'CKV_OCI_9']. Found: ['CKV_OCI_1']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_OCI_10', 'CKV_OCI_7', 'CKV_OCI_8', 'CKV_OCI_9']. Found: ['CKV_OCI_1']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "71c8ec50-75f2-47e8-a802-df528860bf92",
+        "latencyMs": 5627,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"oci_objectstorage_bucket\" \"secretsquirrel\" {\n  # bucket can't emit object events\n  # Storage hasn't versioning enabled\n  # Storage isn't encrypted with Customer Managed Key\n  # Object Storage is Public\"\n  compartment_id        = oci_identity_compartment.tf-compartment.id\n  name                  = \"myreallysecretstore\"\n  namespace             = data.oci_objectstorage_namespace.example.namespace\n  object_events_enabled = false\n  access_type           = \"ObjectRead\"\n  metadata              = { \"data\" = \"Blockofdata\" }\n  storage_tier          = \"Standard\"\n  freeform_tags = {\n    git_commit           = \"7a7b957091945f77ecef712a92ac719c8d9a6498\"\n    git_file             = \"terraform/oracle/bucket.tf\"\n    git_last_modified_at = \"2022-04-06 10:43:57\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"a854aa89-5141-4518-a5dc-0ffe3075f209\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_OCI_1\"],\n  \"remediation_code\": \"resource \\\"oci_objectstorage_bucket\\\" \\\"secretsquirrel\\\" {\\n  compartment_id        = oci_identity_compartment.tf-compartment.id\\n  name                  = \\\"myreallysecretstore\\\"\\n  namespace             = data.oci_objectstorage_namespace.example.namespace\\n  object_events_enabled = false\\n  access_type           = \\\"NoPublicAccess\\\"\\n  metadata              = { \\\"data\\\" = \\\"Blockofdata\\\" }\\n  storage_tier          = \\\"Standard\\\"\\n  freeform_tags = {\\n    git_commit           = \\\"7a7b957091945f77ecef712a92ac719c8d9a6498\\\"\\n    git_file             = \\\"terraform/oracle/bucket.tf\\\"\\n    git_last_modified_at = \\\"2022-04-06 10:43:57\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"a854aa89-5141-4518-a5dc-0ffe3075f209\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 766,
+            "prompt": 457,
+            "completion": 309,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+            "expected_ids": "CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+          "expected_ids": "CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.25,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Successfully identified ['CKV_OCI_7'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "ec2580cd-2354-4182-9b84-1ceab65e97dc",
+        "latencyMs": 3580,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"oci_objectstorage_bucket\" \"secretsquirrel\" {\n  # bucket can't emit object events\n  # Storage hasn't versioning enabled\n  # Storage isn't encrypted with Customer Managed Key\n  # Object Storage is Public\"\n  compartment_id        = oci_identity_compartment.tf-compartment.id\n  name                  = \"myreallysecretstore\"\n  namespace             = data.oci_objectstorage_namespace.example.namespace\n  object_events_enabled = false\n  access_type           = \"ObjectRead\"\n  metadata              = { \"data\" = \"Blockofdata\" }\n  storage_tier          = \"Standard\"\n  freeform_tags = {\n    git_commit           = \"7a7b957091945f77ecef712a92ac719c8d9a6498\"\n    git_file             = \"terraform/oracle/bucket.tf\"\n    git_last_modified_at = \"2022-04-06 10:43:57\"\n    git_last_modified_by = \"james.woolfenden@gmail.com\"\n    git_modifiers        = \"james.woolfenden\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"a854aa89-5141-4518-a5dc-0ffe3075f209\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_OCI_1\",\n    \"CKV_OCI_7\",\n    \"CKV_OCI_35\"\n  ],\n  \"remediation_code\": \"resource \\\"oci_objectstorage_bucket\\\" \\\"secretsquirrel\\\" {\\n  compartment_id        = oci_identity_compartment.tf-compartment.id\\n  name                  = \\\"myreallysecretstore\\\"\\n  namespace             = data.oci_objectstorage_namespace.example.namespace\\n  object_events_enabled = true\\n  access_type           = \\\"NoPublicAccess\\\"\\n  storage_tier          = \\\"Standard\\\"\\n  versioning            = \\\"Enabled\\\"\\n  kms_key_id            = oci_kms_key.test_key.id\\n\\n  metadata = {\\n    \\\"data\\\" = \\\"Blockofdata\\\"\\n  }\\n\\n  freeform_tags = {\\n    git_commit           = \\\"7a7b957091945f77ecef712a92ac719c8d9a6498\\\"\\n    git_file             = \\\"terraform/oracle/bucket.tf\\\"\\n    git_last_modified_at = \\\"2022-04-06 10:43:57\\\"\\n    git_last_modified_by = \\\"james.woolfenden@gmail.com\\\"\\n    git_modifiers        = \\\"james.woolfenden\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"a854aa89-5141-4518-a5dc-0ffe3075f209\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 937,
+            "prompt": 525,
+            "completion": 412,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.25,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+            "expected_ids": "CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\oracle\\bucket.tf",
+          "expected_ids": "CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 2,
+      "failures": 10,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 5807,
+        "completion": 4650,
+        "cached": 0,
+        "total": 10457,
+        "numRequests": 12,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      },
+      "durationMs": 33032,
+      "evaluationDurationMs": 33032
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Terraform Vulnerability Detection Benchmark - Medium Mode",
+    "prompts": [
+      "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n"
+    ],
+    "providers": [
+      {
+        "id": "openrouter:openai/gpt-5.4-mini",
+        "config": {
+          "timeout": 30000
+        }
+      },
+      {
+        "id": "openrouter:google/gemini-3-flash-preview",
+        "config": {
+          "timeout": 30000
+        }
+      },
+      {
+        "id": "openrouter:deepseek/deepseek-chat-v3.1",
+        "config": {
+          "timeout": 60000
+        }
+      }
+    ],
+    "tests": "tests_medium_oracle.csv",
+    "scenarios": [],
+    "env": {},
+    "defaultTest": {
+      "assert": [
+        {
+          "type": "python",
+          "value": "file://validate_output.py"
+        }
+      ],
+      "vars": {},
+      "options": {},
+      "metadata": {}
+    },
+    "outputPath": [
+      "results_medium_oracle.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.3",
+    "nodeVersion": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "exportedAt": "2026-04-08T20:51:57.742Z",
+    "evaluationCreatedAt": "2026-04-08T20:51:24.223Z"
+  }
+}

@@ -1,0 +1,15 @@
+terraform_code,assert_rubric
+file://terragoat/terraform/aws/consts.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/db-app.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/ec2.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/ecr.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/eks.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/elb.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/es.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/iam.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/kms.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/lambda.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/neptune.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/providers.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/rds.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/aws/s3.tf,Must identify the primary security misconfigurations

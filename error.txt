@@ -1,0 +1,34 @@
+﻿Starting evaluation eval-BT1-2026-04-08T19:19:57
+cmd.exe : file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promptfoo/dist/src/evaluato
+r-BcvOGaam.js:4618
+At line:1 char:102
++ ... 0c6850a8a"; cmd.exe /c npx --yes promptfoo@latest eval -c promptfoo_h ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (file:///C:/User...cvOGaam.js:4618:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+			if (values.length === 0) throw new Error(`No files found for variable ${key} at path ${filePath} in directory 
+${basePath || process.cwd()}`);
+			                               ^
+
+Error: No files found for variable terraform_code at path /alicloud/bucket.tf in directory .
+    at generateVarCombinations (file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promp
+tfoo/dist/src/evaluator-BcvOGaam.js:4618:35)
+    at Evaluator._runEvaluation (file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/prom
+ptfoo/dist/src/evaluator-BcvOGaam.js:4905:135)
+    at async Evaluator.evaluate (file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/prom
+ptfoo/dist/src/evaluator-BcvOGaam.js:5511:11)
+    at async runEvaluation 
+(file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promptfoo/dist/src/main.js:4234:10)
+    at async doEval 
+(file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promptfoo/dist/src/main.js:4431:9)
+    at async Command.<anonymous> 
+(file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promptfoo/dist/src/main.js:4490:3)
+    at async Command.parseAsync 
+(C:\Users\Admin\AppData\Local\npm-cache\_npx\81bbc6515d992ace\node_modules\commander\lib\command.js:1122:5)
+    at async main 
+(file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promptfoo/dist/src/main.js:18977:2)
+    at async 
+file:///C:/Users/Admin/AppData/Local/npm-cache/_npx/81bbc6515d992ace/node_modules/promptfoo/dist/src/main.js:19032:3
+
+Node.js v24.14.0

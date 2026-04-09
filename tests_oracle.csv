@@ -1,0 +1,6 @@
+terraform_code,assert_rubric
+file://terragoat/terraform/oracle/bucket.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/oracle/compartment.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/oracle/data.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/oracle/provider.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/oracle/variables.tf,Must identify the primary security misconfigurations

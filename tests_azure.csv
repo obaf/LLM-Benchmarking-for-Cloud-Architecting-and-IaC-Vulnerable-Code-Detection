@@ -1,0 +1,18 @@
+terraform_code,assert_rubric
+file://terragoat/terraform/azure/aks.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/application_gateway.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/app_service.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/instance.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/key_vault.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/logging.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/mssql.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/networking.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/policies.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/provider.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/random.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/resource_group.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/roles.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/security_center.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/sql.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/storage.tf,Must identify the primary security misconfigurations
+file://terragoat/terraform/azure/variables.tf,Must identify the primary security misconfigurations

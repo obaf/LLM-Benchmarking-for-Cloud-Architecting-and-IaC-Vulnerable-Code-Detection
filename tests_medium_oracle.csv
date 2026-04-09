@@ -1,0 +1,5 @@
+terraform_code,expected_ids
+file://terragoat/terraform/alicloud/bucket.tf,"CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_6"
+file://terragoat/terraform/alicloud/rds.tf,"CKV_ALI_20,CKV_ALI_25,CKV_ALI_30,CKV_ALI_35,CKV_ALI_36,CKV_ALI_37,CKV_ALI_9"
+file://terragoat/terraform/alicloud/trail.tf,"CKV_ALI_10,CKV_ALI_11,CKV_ALI_12,CKV_ALI_4,CKV_ALI_5,CKV_ALI_6"
+file://terragoat/terraform/oracle/bucket.tf,"CKV_OCI_10,CKV_OCI_7,CKV_OCI_8,CKV_OCI_9"

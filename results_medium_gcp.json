@@ -1,0 +1,1441 @@
+{
+  "evalId": "eval-TR5-2026-04-08T20:49:25",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-04-08T20:49:25.867Z",
+    "prompts": [
+      {
+        "id": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "provider": "openrouter:openai/gpt-5.4-mini",
+        "metrics": {
+          "score": 0.5666666666666667,
+          "testPassCount": 3,
+          "testFailCount": 2,
+          "testErrorCount": 0,
+          "assertPassCount": 3,
+          "assertFailCount": 2,
+          "totalLatencyMs": 15568,
+          "tokenUsage": {
+            "prompt": 2263,
+            "completion": 1900,
+            "cached": 0,
+            "total": 4163,
+            "numRequests": 5,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "provider": "openrouter:google/gemini-3-flash-preview",
+        "metrics": {
+          "score": 1.7722222222222221,
+          "testPassCount": 5,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 5,
+          "assertFailCount": 0,
+          "totalLatencyMs": 20877,
+          "tokenUsage": {
+            "prompt": 2720,
+            "completion": 2809,
+            "cached": 0,
+            "total": 5529,
+            "numRequests": 5,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+        "provider": "openrouter:deepseek/deepseek-chat-v3.1",
+        "metrics": {
+          "score": 0.775,
+          "testPassCount": 5,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 5,
+          "assertFailCount": 0,
+          "totalLatencyMs": 183734,
+          "tokenUsage": {
+            "prompt": 2407,
+            "completion": 2043,
+            "cached": 0,
+            "total": 4450,
+            "numRequests": 5,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.2,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.2,
+              "reason": "Successfully identified ['CKV_GCP_11', 'CKV_GCP_60', 'CKV_GCP_81'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "e19adb33-ac95-4654-a69f-d1783595988f",
+        "latencyMs": 3159,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_sql_database_instance\" \"master_instance\" {\n  name             = \"terragoat-${var.environment}-master\"\n  database_version = \"POSTGRES_11\"\n  region           = var.region\n\n  settings {\n    tier = \"db-f1-micro\"\n    ip_configuration {\n      ipv4_enabled = true\n      authorized_networks {\n        name  = \"WWW\"\n        value = \"0.0.0.0/0\"\n      }\n    }\n    backup_configuration {\n      enabled = false\n    }\n  }\n}\n\nresource \"google_bigquery_dataset\" \"dataset\" {\n  dataset_id = \"terragoat_${var.environment}_dataset\"\n  access {\n    special_group = \"allAuthenticatedUsers\"\n    role          = \"READER\"\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__big_data_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"2560d883-bc3a-4cb6-b9fc-fb666edf626e\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_GCP_11\",\n    \"CKV_GCP_40\",\n    \"CKV_GCP_60\",\n    \"CKV_GCP_81\"\n  ],\n  \"remediation_code\": \"resource \\\"google_sql_database_instance\\\" \\\"master_instance\\\" {\\n  name             = \\\"terragoat-${var.environment}-master\\\"\\n  database_version = \\\"POSTGRES_11\\\"\\n  region           = var.region\\n\\n  settings {\\n    tier = \\\"db-f1-micro\\\"\\n    ip_configuration {\\n      ipv4_enabled = false\\n      require_ssl  = true\\n    }\\n    backup_configuration {\\n      enabled            = true\\n      binary_log_enabled = true\\n    }\\n  }\\n}\\n\\nresource \\\"google_bigquery_dataset\\\" \\\"dataset\\\" {\\n  dataset_id = \\\"terragoat_${var.environment}_dataset\\\"\\n  \\n  # Removed allAuthenticatedUsers to prevent public/authenticated access\\n  access {\\n    role          = \\\"READER\\\"\\n    user_by_email = \\\"admin@example.com\\\"\\n  }\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__big_data_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"2560d883-bc3a-4cb6-b9fc-fb666edf626e\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 1050,
+            "prompt": 565,
+            "completion": 485,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.2,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+            "expected_ids": "CKV_GCP_108,CKV_GCP_109,CKV_GCP_11,CKV_GCP_110,CKV_GCP_111,CKV_GCP_14,CKV_GCP_15,CKV_GCP_51,CKV_GCP_52,CKV_GCP_53,CKV_GCP_54,CKV_GCP_6,CKV_GCP_60,CKV_GCP_79,CKV_GCP_81"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+          "expected_ids": "CKV_GCP_108,CKV_GCP_109,CKV_GCP_11,CKV_GCP_110,CKV_GCP_111,CKV_GCP_14,CKV_GCP_15,CKV_GCP_51,CKV_GCP_52,CKV_GCP_53,CKV_GCP_54,CKV_GCP_6,CKV_GCP_60,CKV_GCP_79,CKV_GCP_81"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.06666666666666667,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.06666666666666667,
+              "reason": "Successfully identified ['CKV_GCP_14'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "99b03d9c-d96d-469c-8088-169ed68aebe8",
+        "latencyMs": 3155,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_sql_database_instance\" \"master_instance\" {\n  name             = \"terragoat-${var.environment}-master\"\n  database_version = \"POSTGRES_11\"\n  region           = var.region\n\n  settings {\n    tier = \"db-f1-micro\"\n    ip_configuration {\n      ipv4_enabled = true\n      authorized_networks {\n        name  = \"WWW\"\n        value = \"0.0.0.0/0\"\n      }\n    }\n    backup_configuration {\n      enabled = false\n    }\n  }\n}\n\nresource \"google_bigquery_dataset\" \"dataset\" {\n  dataset_id = \"terragoat_${var.environment}_dataset\"\n  access {\n    special_group = \"allAuthenticatedUsers\"\n    role          = \"READER\"\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__big_data_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"2560d883-bc3a-4cb6-b9fc-fb666edf626e\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_14\", \"CKV_GCP_2\"],\n  \"remediation_code\": \"resource \\\"google_sql_database_instance\\\" \\\"master_instance\\\" {\\n  name             = \\\"terragoat-${var.environment}-master\\\"\\n  database_version = \\\"POSTGRES_11\\\"\\n  region           = var.region\\n\\n  settings {\\n    tier = \\\"db-f1-micro\\\"\\n\\n    ip_configuration {\\n      ipv4_enabled    = false\\n      private_network = var.private_network\\n    }\\n\\n    backup_configuration {\\n      enabled = true\\n    }\\n  }\\n}\\n\\nresource \\\"google_bigquery_dataset\\\" \\\"dataset\\\" {\\n  dataset_id = \\\"terragoat_${var.environment}_dataset\\\"\\n\\n  access {\\n    role          = \\\"READER\\\"\\n    user_by_email = var.bq_reader_email\\n  }\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__big_data_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"2560d883-bc3a-4cb6-b9fc-fb666edf626e\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 830,
+            "prompt": 469,
+            "completion": 361,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.06666666666666667,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+            "expected_ids": "CKV_GCP_108,CKV_GCP_109,CKV_GCP_11,CKV_GCP_110,CKV_GCP_111,CKV_GCP_14,CKV_GCP_15,CKV_GCP_51,CKV_GCP_52,CKV_GCP_53,CKV_GCP_54,CKV_GCP_6,CKV_GCP_60,CKV_GCP_79,CKV_GCP_81"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+          "expected_ids": "CKV_GCP_108,CKV_GCP_109,CKV_GCP_11,CKV_GCP_110,CKV_GCP_111,CKV_GCP_14,CKV_GCP_15,CKV_GCP_51,CKV_GCP_52,CKV_GCP_53,CKV_GCP_54,CKV_GCP_6,CKV_GCP_60,CKV_GCP_79,CKV_GCP_81"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.03333333333333333,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.03333333333333333,
+              "reason": "Found valid IDs: ['CKV_GCP_6'], but invalid HCL syntax: Line has unclosed quote marks:   database_version = \"POSTGRES_n      ipv4_enabled = false",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "7886cb42-babb-44a2-9f20-3c51c28a6c3c",
+        "latencyMs": 20558,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_sql_database_instance\" \"master_instance\" {\n  name             = \"terragoat-${var.environment}-master\"\n  database_version = \"POSTGRES_11\"\n  region           = var.region\n\n  settings {\n    tier = \"db-f1-micro\"\n    ip_configuration {\n      ipv4_enabled = true\n      authorized_networks {\n        name  = \"WWW\"\n        value = \"0.0.0.0/0\"\n      }\n    }\n    backup_configuration {\n      enabled = false\n    }\n  }\n}\n\nresource \"google_bigquery_dataset\" \"dataset\" {\n  dataset_id = \"terragoat_${var.environment}_dataset\"\n  access {\n    special_group = \"allAuthenticatedUsers\"\n    role          = \"READER\"\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__big_data_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"2560d883-bc3a-4cb6-b9fc-fb666edf626e\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_6\", \"CKV_GCP_8\", \"CKV_GCP_12\"],\n  \"remediation_code\": \"resource \\\"google_sql_database_instance\\\" \\\"master_instance\\\" {\\n  name             = \\\"terragoat-${var.environment}-master\\\"\\n  database_version = \\\"POSTGRES_n      ipv4_enabled = false\\n      require_ssl = true\\n    }\\n    backup_configuration {\\n      enabled = true\\n    }\\n  }\\n}\\n\\nresource \\\"google_bigquery_dataset\\\" \\\"dataset\\\" {\\n  dataset_id = \\\"terragoat_${var.environment}_dataset\\\"\\n  access {\\n    role          = \\\"READER\\\"\\n    user_by_email = \\\"specific-service-account@example.com\\\"\\n  }\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__big_data_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"2560d883-bc3a-4cb6-b9fc-fb666edf626e\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 891,
+            "prompt": 495,
+            "completion": 396,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.03333333333333333,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+            "expected_ids": "CKV_GCP_108,CKV_GCP_109,CKV_GCP_11,CKV_GCP_110,CKV_GCP_111,CKV_GCP_14,CKV_GCP_15,CKV_GCP_51,CKV_GCP_52,CKV_GCP_53,CKV_GCP_54,CKV_GCP_6,CKV_GCP_60,CKV_GCP_79,CKV_GCP_81"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\big_data.tf",
+          "expected_ids": "CKV_GCP_108,CKV_GCP_109,CKV_GCP_11,CKV_GCP_110,CKV_GCP_111,CKV_GCP_14,CKV_GCP_15,CKV_GCP_51,CKV_GCP_52,CKV_GCP_53,CKV_GCP_54,CKV_GCP_6,CKV_GCP_60,CKV_GCP_79,CKV_GCP_81"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_GCP_114', 'CKV_GCP_28', 'CKV_GCP_29', 'CKV_GCP_62', 'CKV_GCP_78']. Found: ['CKV_GCP_52', 'CKV_GCP_38']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_GCP_114', 'CKV_GCP_28', 'CKV_GCP_29', 'CKV_GCP_62', 'CKV_GCP_78']. Found: ['CKV_GCP_52', 'CKV_GCP_38']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_GCP_114', 'CKV_GCP_28', 'CKV_GCP_29', 'CKV_GCP_62', 'CKV_GCP_78']. Found: ['CKV_GCP_52', 'CKV_GCP_38']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "3a1eac5b-0180-4206-8835-b250c4617069",
+        "latencyMs": 3592,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_storage_bucket\" \"terragoat_website\" {\n  name          = \"terragot-${var.environment}\"\n  location      = var.location\n  force_destroy = true\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__gcs_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\"\n  }\n}\n\nresource \"google_storage_bucket_iam_binding\" \"allow_public_read\" {\n  bucket  = google_storage_bucket.terragoat_website.id\n  members = [\"allUsers\"]\n  role    = \"roles/storage.objectViewer\"\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_52\", \"CKV_GCP_38\"],\n  \"remediation_code\": \"resource \\\"google_storage_bucket\\\" \\\"terragoat_website\\\" {\\n  name          = \\\"terragot-${var.environment}\\\"\\n  location      = var.location\\n  force_destroy = false\\n\\n  uniform_bucket_level_access = true\\n\\n  public_access_prevention = \\\"enforced\\\"\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__gcs_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\\\"\\n  }\\n}\\n\\n# Remove public IAM binding to prevent anonymous/public read access\\n# resource \\\"google_storage_bucket_iam_binding\\\" \\\"allow_public_read\\\" {\\n#   bucket  = google_storage_bucket.terragoat_website.id\\n#   members = [\\\"allUsers\\\"]\\n#   role    = \\\"roles/storage.objectViewer\\\"\\n# }\\n\"\n}",
+          "tokenUsage": {
+            "total": 746,
+            "prompt": 401,
+            "completion": 345,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+            "expected_ids": "CKV_GCP_114,CKV_GCP_28,CKV_GCP_29,CKV_GCP_62,CKV_GCP_78"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+          "expected_ids": "CKV_GCP_114,CKV_GCP_28,CKV_GCP_29,CKV_GCP_62,CKV_GCP_78"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.6,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.6,
+              "reason": "Successfully identified ['CKV_GCP_114', 'CKV_GCP_28', 'CKV_GCP_62'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "ffebddd8-6e22-4dc4-9ddc-0d265af0158b",
+        "latencyMs": 3367,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_storage_bucket\" \"terragoat_website\" {\n  name          = \"terragot-${var.environment}\"\n  location      = var.location\n  force_destroy = true\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__gcs_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\"\n  }\n}\n\nresource \"google_storage_bucket_iam_binding\" \"allow_public_read\" {\n  bucket  = google_storage_bucket.terragoat_website.id\n  members = [\"allUsers\"]\n  role    = \"roles/storage.objectViewer\"\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_GCP_28\",\n    \"CKV_GCP_114\",\n    \"CKV_GCP_62\"\n  ],\n  \"remediation_code\": \"resource \\\"google_storage_bucket\\\" \\\"terragoat_website\\\" {\\n  name                        = \\\"terragot-${var.environment}\\\"\\n  location                    = var.location\\n  force_destroy               = true\\n  public_access_prevention    = \\\"enforced\\\"\\n  uniform_bucket_level_access = true\\n\\n  versioning {\\n    enabled = true\\n  }\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__gcs_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\\\"\\n  }\\n}\\n\\n# Removed google_storage_bucket_iam_binding for allUsers to prevent public exposure\"\n}",
+          "tokenUsage": {
+            "total": 853,
+            "prompt": 477,
+            "completion": 376,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.6,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+            "expected_ids": "CKV_GCP_114,CKV_GCP_28,CKV_GCP_29,CKV_GCP_62,CKV_GCP_78"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+          "expected_ids": "CKV_GCP_114,CKV_GCP_28,CKV_GCP_29,CKV_GCP_62,CKV_GCP_78"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.2,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.2,
+              "reason": "Successfully identified ['CKV_GCP_29'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "96d2a8d2-4e3a-4f30-a7ee-b508a363f6e4",
+        "latencyMs": 40781,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_storage_bucket\" \"terragoat_website\" {\n  name          = \"terragot-${var.environment}\"\n  location      = var.location\n  force_destroy = true\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__gcs_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\"\n  }\n}\n\nresource \"google_storage_bucket_iam_binding\" \"allow_public_read\" {\n  bucket  = google_storage_bucket.terragoat_website.id\n  members = [\"allUsers\"]\n  role    = \"roles/storage.objectViewer\"\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_29\"],\n  \"remediation_code\": \"resource \\\"google_storage_bucket\\\" \\\"terragoat_website\\\" {\\n  name          = \\\"terragot-${var.environment}\\\"\\n  location      = var.location\\n  force_destroy = true\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__gcs_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"bd00cd2e-f53f-4daf-8d4d-74c47846c1cc\\\"\\n  }\\n}\\n\\nresource \\\"google_storage_bucket_iam_binding\\\" \\\"allow_public_read\\\" {\\n  bucket  = google_storage_bucket.terragoat_website.id\\n  members = [\\\"allAuthenticatedUsers\\\"]\\n  role    = \\\"roles/storage.objectViewer\\\"\\n}\"\n}",
+          "tokenUsage": {
+            "total": 744,
+            "prompt": 425,
+            "completion": 319,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.2,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+            "expected_ids": "CKV_GCP_114,CKV_GCP_28,CKV_GCP_29,CKV_GCP_62,CKV_GCP_78"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gcs.tf",
+          "expected_ids": "CKV_GCP_114,CKV_GCP_28,CKV_GCP_29,CKV_GCP_62,CKV_GCP_78"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "error": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_GCP_1', 'CKV_GCP_10', 'CKV_GCP_12', 'CKV_GCP_13', 'CKV_GCP_18', 'CKV_GCP_21', 'CKV_GCP_23', 'CKV_GCP_25', 'CKV_GCP_61', 'CKV_GCP_64', 'CKV_GCP_65', 'CKV_GCP_66', 'CKV_GCP_68', 'CKV_GCP_69', 'CKV_GCP_7', 'CKV_GCP_70', 'CKV_GCP_8', 'CKV_GCP_9']. Found: ['CKV_GCP_31', 'CKV_GCP_34', 'CKV_GCP_63']",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_GCP_1', 'CKV_GCP_10', 'CKV_GCP_12', 'CKV_GCP_13', 'CKV_GCP_18', 'CKV_GCP_21', 'CKV_GCP_23', 'CKV_GCP_25', 'CKV_GCP_61', 'CKV_GCP_64', 'CKV_GCP_65', 'CKV_GCP_66', 'CKV_GCP_68', 'CKV_GCP_69', 'CKV_GCP_7', 'CKV_GCP_70', 'CKV_GCP_8', 'CKV_GCP_9']. Found: ['CKV_GCP_31', 'CKV_GCP_34', 'CKV_GCP_63']",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed to find ANY expected vulnerabilities. Expected: ['CKV_GCP_1', 'CKV_GCP_10', 'CKV_GCP_12', 'CKV_GCP_13', 'CKV_GCP_18', 'CKV_GCP_21', 'CKV_GCP_23', 'CKV_GCP_25', 'CKV_GCP_61', 'CKV_GCP_64', 'CKV_GCP_65', 'CKV_GCP_66', 'CKV_GCP_68', 'CKV_GCP_69', 'CKV_GCP_7', 'CKV_GCP_70', 'CKV_GCP_8', 'CKV_GCP_9']. Found: ['CKV_GCP_31', 'CKV_GCP_34', 'CKV_GCP_63']",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "4e3af013-b104-426e-b480-71c1b409a831",
+        "latencyMs": 2191,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\ndata \"google_compute_zones\" \"available_zones\" {\n  project = var.project\n  region  = var.region\n}\n\nresource \"google_container_cluster\" \"workload_cluster\" {\n  name               = \"terragoat-${var.environment}-cluster\"\n  logging_service    = \"none\"\n  location           = var.region\n  initial_node_count = 1\n\n  enable_legacy_abac       = true\n  monitoring_service       = \"none\"\n  remove_default_node_pool = true\n  network                  = google_compute_network.vpc.name\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\n  master_authorized_networks_config {\n    cidr_blocks {\n      cidr_block = \"0.0.0.0/0\"\n    }\n  }\n}\n\nresource \"google_container_node_pool\" \"custom_node_pool\" {\n  cluster  = google_container_cluster.workload_cluster.name\n  location = var.region\n\n  node_config {\n    image_type = \"Ubuntu\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_31\", \"CKV_GCP_34\", \"CKV_GCP_63\"],\n  \"remediation_code\": \"resource \\\"google_container_cluster\\\" \\\"workload_cluster\\\" {\\n  name               = \\\"terragoat-${var.environment}-cluster\\\"\\n  logging_service    = \\\"logging.googleapis.com/kubernetes\\\"\\n  location           = var.region\\n  initial_node_count = 1\\n\\n  enable_legacy_abac       = false\\n  monitoring_service       = \\\"monitoring.googleapis.com/kubernetes\\\"\\n  remove_default_node_pool = true\\n  network                  = google_compute_network.vpc.name\\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\\n\\n  master_authorized_networks_config {\\n    cidr_blocks {\\n      cidr_block   = var.master_authorized_cidr\\n      display_name = \\\"allowed-admin-network\\\"\\n    }\\n  }\\n}\\n\\nresource \\\"google_container_node_pool\\\" \\\"custom_node_pool\\\" {\\n  cluster  = google_container_cluster.workload_cluster.name\\n  location = var.region\\n\\n  node_config {\\n    image_type = \\\"COS_CONTAINERD\\\"\\n  }\\n}\\n\"\n}",
+          "tokenUsage": {
+            "total": 623,
+            "prompt": 364,
+            "completion": 259,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+            "expected_ids": "CKV_GCP_1,CKV_GCP_10,CKV_GCP_12,CKV_GCP_13,CKV_GCP_18,CKV_GCP_21,CKV_GCP_23,CKV_GCP_25,CKV_GCP_61,CKV_GCP_64,CKV_GCP_65,CKV_GCP_66,CKV_GCP_68,CKV_GCP_69,CKV_GCP_7,CKV_GCP_70,CKV_GCP_8,CKV_GCP_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+          "expected_ids": "CKV_GCP_1,CKV_GCP_10,CKV_GCP_12,CKV_GCP_13,CKV_GCP_18,CKV_GCP_21,CKV_GCP_23,CKV_GCP_25,CKV_GCP_61,CKV_GCP_64,CKV_GCP_65,CKV_GCP_66,CKV_GCP_68,CKV_GCP_69,CKV_GCP_7,CKV_GCP_70,CKV_GCP_8,CKV_GCP_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.2222222222222222,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.2222222222222222,
+              "reason": "Successfully identified ['CKV_GCP_10', 'CKV_GCP_12', 'CKV_GCP_69', 'CKV_GCP_7'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "dde36336-1102-4fb8-b2dc-08a732404531",
+        "latencyMs": 4204,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\ndata \"google_compute_zones\" \"available_zones\" {\n  project = var.project\n  region  = var.region\n}\n\nresource \"google_container_cluster\" \"workload_cluster\" {\n  name               = \"terragoat-${var.environment}-cluster\"\n  logging_service    = \"none\"\n  location           = var.region\n  initial_node_count = 1\n\n  enable_legacy_abac       = true\n  monitoring_service       = \"none\"\n  remove_default_node_pool = true\n  network                  = google_compute_network.vpc.name\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\n  master_authorized_networks_config {\n    cidr_blocks {\n      cidr_block = \"0.0.0.0/0\"\n    }\n  }\n}\n\nresource \"google_container_node_pool\" \"custom_node_pool\" {\n  cluster  = google_container_cluster.workload_cluster.name\n  location = var.region\n\n  node_config {\n    image_type = \"Ubuntu\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_GCP_7\",\n    \"CKV_GCP_20\",\n    \"CKV_GCP_19\",\n    \"CKV_GCP_69\",\n    \"CKV_GCP_10\",\n    \"CKV_GCP_12\"\n  ],\n  \"remediation_code\": \"resource \\\"google_container_cluster\\\" \\\"workload_cluster\\\" {\\n  name               = \\\"terragoat-${var.environment}-cluster\\\"\\n  logging_service    = \\\"logging.googleapis.com/kubernetes\\\"\\n  monitoring_service = \\\"monitoring.googleapis.com/kubernetes\\\"\\n  location           = var.region\\n  initial_node_count = 1\\n\\n  # Disable legacy ABAC for RBAC security\\n  enable_legacy_abac       = false\\n  remove_default_node_pool = true\\n  network                  = google_compute_network.vpc.name\\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\\n\\n  # Restrict master access to specific IPs instead of 0.0.0.0/0\\n  master_authorized_networks_config {\\n    cidr_blocks {\\n      cidr_block   = \\\"10.0.0.0/8\\\"\\n      display_name = \\\"internal-network\\\"\\n    }\\n  }\\n\\n  # Enable Shielded Nodes\\n  enable_shielded_nodes = true\\n\\n  # Enable Workload Identity\\n  workload_identity_config {\\n    workload_pool = \\\"${var.project}.svc.id.goog\\\"\\n  }\\n}\\n\\nresource \\\"google_container_node_pool\\\" \\\"custom_node_pool\\\" {\\n  cluster  = google_container_cluster.workload_cluster.name\\n  location = var.region\\n\\n  node_config {\\n    image_type = \\\"COS_CONTAINERD\\\"\\n    # Ensure secure boot and integrity monitoring\\n    shielded_instance_config {\\n      enable_secure_boot          = true\\n      enable_integrity_monitoring = true\\n    }\\n    # Best practice: use a dedicated least-privilege service account\\n    service_account = \\\"gke-node-sa@${var.project}.iam.gserviceaccount.com\\\"\\n    oauth_scopes = [\\n      \\\"https://www.googleapis.com/auth/cloud-platform\\\"\\n    ]\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 1005,
+            "prompt": 429,
+            "completion": 576,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.2222222222222222,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+            "expected_ids": "CKV_GCP_1,CKV_GCP_10,CKV_GCP_12,CKV_GCP_13,CKV_GCP_18,CKV_GCP_21,CKV_GCP_23,CKV_GCP_25,CKV_GCP_61,CKV_GCP_64,CKV_GCP_65,CKV_GCP_66,CKV_GCP_68,CKV_GCP_69,CKV_GCP_7,CKV_GCP_70,CKV_GCP_8,CKV_GCP_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+          "expected_ids": "CKV_GCP_1,CKV_GCP_10,CKV_GCP_12,CKV_GCP_13,CKV_GCP_18,CKV_GCP_21,CKV_GCP_23,CKV_GCP_25,CKV_GCP_61,CKV_GCP_64,CKV_GCP_65,CKV_GCP_66,CKV_GCP_68,CKV_GCP_69,CKV_GCP_7,CKV_GCP_70,CKV_GCP_8,CKV_GCP_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.16666666666666666,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.16666666666666666,
+              "reason": "Successfully identified ['CKV_GCP_1', 'CKV_GCP_12', 'CKV_GCP_21'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "af948add-a70e-4c68-99b2-8331e42bc234",
+        "latencyMs": 10892,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\ndata \"google_compute_zones\" \"available_zones\" {\n  project = var.project\n  region  = var.region\n}\n\nresource \"google_container_cluster\" \"workload_cluster\" {\n  name               = \"terragoat-${var.environment}-cluster\"\n  logging_service    = \"none\"\n  location           = var.region\n  initial_node_count = 1\n\n  enable_legacy_abac       = true\n  monitoring_service       = \"none\"\n  remove_default_node_pool = true\n  network                  = google_compute_network.vpc.name\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\n  master_authorized_networks_config {\n    cidr_blocks {\n      cidr_block = \"0.0.0.0/0\"\n    }\n  }\n}\n\nresource \"google_container_node_pool\" \"custom_node_pool\" {\n  cluster  = google_container_cluster.workload_cluster.name\n  location = var.region\n\n  node_config {\n    image_type = \"Ubuntu\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "```json\n{\n  \"vulnerabilities\": [\"CKV_GCP_12\", \"CKV_GCP_19\", \"CKV_GCP_1\", \"CKV_GCP_21\"],\n  \"remediation_code\": \"data \\\"google_compute_zones\\\" \\\"available_zones\\\" {\\n  project = var.project\\n  region  = var.region\\n}\\n\\nresource \\\"google_container_cluster\\\" \\\"workload_cluster\\\" {\\n  name               = \\\"terragoat-${var.environment}-cluster\\\"\\n  logging_service    = \\\"logging.googleapis.com/kubernetes\\\"\\n  location           = var.region\\n  initial_node_count = 1\\n\\n  enable_legacy_abac       = false\\n  monitoring_service       = \\\"monitoring.googleapis.com/kubernetes\\\"\\n  remove_default_node_pool = true\\n  network                  = google_compute_network.vpc.name\\n  subnetwork               = google_compute_subnetwork.public-subnetwork.name\\n  master_authorized_networks_config {\\n    cidr_blocks {\\n      cidr_block   = \\\"10.0.0.0/8\\\"\\n      display_name = \\\"Internal Network\\\"\\n    }\\n  }\\n  enable_shielded_nodes = true\\n}\\n\\nresource \\\"google_container_node_pool\\\" \\\"custom_node_pool\\\" {\\n  cluster  = google_container_cluster.workload_cluster.name\\n  location = var.region\\n\\n  node_config {\\n    image_type   = \\\"Ubuntu\\\"\\n    disk_type    = \\\"pd-ssd\\\"\\n    disk_size_gb = 100\\n  }\\n}\"\n}\n```",
+          "tokenUsage": {
+            "total": 757,
+            "prompt": 394,
+            "completion": 363,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.16666666666666666,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+            "expected_ids": "CKV_GCP_1,CKV_GCP_10,CKV_GCP_12,CKV_GCP_13,CKV_GCP_18,CKV_GCP_21,CKV_GCP_23,CKV_GCP_25,CKV_GCP_61,CKV_GCP_64,CKV_GCP_65,CKV_GCP_66,CKV_GCP_68,CKV_GCP_69,CKV_GCP_7,CKV_GCP_70,CKV_GCP_8,CKV_GCP_9"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\gke.tf",
+          "expected_ids": "CKV_GCP_1,CKV_GCP_10,CKV_GCP_12,CKV_GCP_13,CKV_GCP_18,CKV_GCP_21,CKV_GCP_23,CKV_GCP_25,CKV_GCP_61,CKV_GCP_64,CKV_GCP_65,CKV_GCP_66,CKV_GCP_68,CKV_GCP_69,CKV_GCP_7,CKV_GCP_70,CKV_GCP_8,CKV_GCP_9"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.375,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.375,
+              "reason": "Successfully identified ['CKV_GCP_32', 'CKV_GCP_34', 'CKV_GCP_37'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "5047bd28-c300-48db-b3cd-3c31491c321f",
+        "latencyMs": 4262,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\ndata \"google_compute_zones\" \"zones\" {}\n\nresource \"google_compute_instance\" \"server\" {\n  machine_type = \"n1-standard-1\"\n  name         = \"terragoat-${var.environment}-machine\"\n  zone         = data.google_compute_zones.zones.names[0]\n  boot_disk {\n    initialize_params {\n      image = \"debian-cloud/debian-9\"\n    }\n    auto_delete = true\n  }\n  network_interface {\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\n    access_config {}\n  }\n  can_ip_forward = true\n\n  metadata = {\n    block-project-ssh-keys = false\n    enable-oslogin         = false\n    serial-port-enable     = true\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\"\n  }\n}\n\nresource \"google_compute_disk\" \"unencrypted_disk\" {\n  name = \"terragoat-${var.environment}-disk\"\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_GCP_37\",\n    \"CKV_GCP_34\",\n    \"CKV_GCP_18\",\n    \"CKV_GCP_32\"\n  ],\n  \"remediation_code\": \"resource \\\"google_compute_instance\\\" \\\"server\\\" {\\n  machine_type = \\\"n1-standard-1\\\"\\n  name         = \\\"terragoat-${var.environment}-machine\\\"\\n  zone         = data.google_compute_zones.zones.names[0]\\n\\n  boot_disk {\\n    initialize_params {\\n      image = \\\"debian-cloud/debian-11\\\"\\n    }\\n    auto_delete = true\\n  }\\n\\n  network_interface {\\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\\n    # Removed public IP assignment\\n  }\\n\\n  can_ip_forward = false\\n\\n  metadata = {\\n    block-project-ssh-keys = true\\n    enable-oslogin         = true\\n    serial-port-enable     = false\\n  }\\n\\n  shielded_instance_config {\\n    enable_secure_boot          = true\\n    enable_vtpm                 = true\\n    enable_integrity_monitoring = true\\n  }\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__instances_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\\\"\\n  }\\n}\\n\\nresource \\\"google_compute_disk\\\" \\\"encrypted_disk\\\" {\\n  name = \\\"terragoat-${var.environment}-disk\\\"\\n\\n  disk_encryption_key {\\n    kms_key_self_link = google_kms_crypto_key.disk_key.id\\n  }\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__instances_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\\\"\\n  }\\n}\\n\"\n}",
+          "tokenUsage": {
+            "total": 1295,
+            "prompt": 648,
+            "completion": 647,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.375,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+            "expected_ids": "CKV_GCP_32,CKV_GCP_34,CKV_GCP_35,CKV_GCP_36,CKV_GCP_37,CKV_GCP_38,CKV_GCP_39,CKV_GCP_40"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+          "expected_ids": "CKV_GCP_32,CKV_GCP_34,CKV_GCP_35,CKV_GCP_36,CKV_GCP_37,CKV_GCP_38,CKV_GCP_39,CKV_GCP_40"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.5,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.5,
+              "reason": "Successfully identified ['CKV_GCP_32', 'CKV_GCP_37', 'CKV_GCP_38', 'CKV_GCP_40'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "26501479-83b3-4af8-9796-764b3a20daa7",
+        "latencyMs": 6441,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\ndata \"google_compute_zones\" \"zones\" {}\n\nresource \"google_compute_instance\" \"server\" {\n  machine_type = \"n1-standard-1\"\n  name         = \"terragoat-${var.environment}-machine\"\n  zone         = data.google_compute_zones.zones.names[0]\n  boot_disk {\n    initialize_params {\n      image = \"debian-cloud/debian-9\"\n    }\n    auto_delete = true\n  }\n  network_interface {\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\n    access_config {}\n  }\n  can_ip_forward = true\n\n  metadata = {\n    block-project-ssh-keys = false\n    enable-oslogin         = false\n    serial-port-enable     = true\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\"\n  }\n}\n\nresource \"google_compute_disk\" \"unencrypted_disk\" {\n  name = \"terragoat-${var.environment}-disk\"\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_GCP_30\",\n    \"CKV_GCP_32\",\n    \"CKV_GCP_38\",\n    \"CKV_GCP_40\",\n    \"CKV_GCP_37\",\n    \"CKV_GCP_24\"\n  ],\n  \"remediation_code\": \"data \\\"google_compute_zones\\\" \\\"zones\\\" {}\\n\\nresource \\\"google_compute_instance\\\" \\\"server\\\" {\\n  machine_type = \\\"n1-standard-1\\\"\\n  name         = \\\"terragoat-${var.environment}-machine\\\"\\n  zone         = data.google_compute_zones.zones.names[0]\\n  \\n  boot_disk {\\n    initialize_params {\\n      image = \\\"debian-cloud/debian-9\\\"\\n    }\\n    auto_delete = true\\n    # CKV_GCP_38: Ensure boot disk is encrypted with Customer Supplied Encryption Keys (CSEK)\\n    kms_key_self_link = var.kms_key_id\\n  }\\n\\n  network_interface {\\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\\n    # CKV_GCP_40: Removed access_config to prevent public IP assignment\\n  }\\n\\n  # CKV_GCP_37: Disable IP forwarding unless necessary\\n  can_ip_forward = false\\n\\n  metadata = {\\n    # CKV_GCP_30: Ensure project-wide SSH keys are blocked\\n    block-project-ssh-keys = true\\n    # CKV_GCP_32: Ensure OS Login is enabled\\n    enable-oslogin         = true\\n    # CKV_GCP_24: Ensure serial port access is disabled\\n    serial-port-enable     = false\\n  }\\n\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__instances_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\\\"\\n  }\\n}\\n\\nresource \\\"google_compute_disk\\\" \\\"unencrypted_disk\\\" {\\n  name = \\\"terragoat-${var.environment}-disk\\\"\\n  # CKV_GCP_37: Ensure disks are encrypted with KMS\\n  disk_encryption_key {\\n    kms_key_self_link = var.kms_key_id\\n  }\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__instances_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 1723,
+            "prompt": 796,
+            "completion": 927,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.5,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+            "expected_ids": "CKV_GCP_32,CKV_GCP_34,CKV_GCP_35,CKV_GCP_36,CKV_GCP_37,CKV_GCP_38,CKV_GCP_39,CKV_GCP_40"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+          "expected_ids": "CKV_GCP_32,CKV_GCP_34,CKV_GCP_35,CKV_GCP_36,CKV_GCP_37,CKV_GCP_38,CKV_GCP_39,CKV_GCP_40"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.125,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.125,
+              "reason": "Successfully identified ['CKV_GCP_32'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "84219285-f1d4-4110-b7cf-90f6f6fe0263",
+        "latencyMs": 86410,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\ndata \"google_compute_zones\" \"zones\" {}\n\nresource \"google_compute_instance\" \"server\" {\n  machine_type = \"n1-standard-1\"\n  name         = \"terragoat-${var.environment}-machine\"\n  zone         = data.google_compute_zones.zones.names[0]\n  boot_disk {\n    initialize_params {\n      image = \"debian-cloud/debian-9\"\n    }\n    auto_delete = true\n  }\n  network_interface {\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\n    access_config {}\n  }\n  can_ip_forward = true\n\n  metadata = {\n    block-project-ssh-keys = false\n    enable-oslogin         = false\n    serial-port-enable     = true\n  }\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\"\n  }\n}\n\nresource \"google_compute_disk\" \"unencrypted_disk\" {\n  name = \"terragoat-${var.environment}-disk\"\n  labels = {\n    git_commit           = \"2bdc0871a5f4505be58244029cc6485d45d7bb8e\"\n    git_file             = \"terraform__gcp__instances_tf\"\n    git_last_modified_at = \"2022-01-19-17-02-27\"\n    git_last_modified_by = \"jameswoolfenden\"\n    git_modifiers        = \"jameswoolfenden__nimrodkor\"\n    git_org              = \"bridgecrewio\"\n    git_repo             = \"terragoat\"\n    yor_trace            = \"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\"\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_30\", \"CKV_GCP_32\", \"CKV_GCP_31\"],\n  \"remediation_code\": \"resource \\\"google_compute_instance\\\" \\\"server\\\" {\\n  machine_type = \\\"n1-standard-1\\\"\\n  name         = \\\"terragoat-${var.environment}-machine\\\"\\n  zone         = data.google_compute_zones.zones.names[0]\\n  boot_disk {\\n    initialize_params {\\n      image = \\\"debian-cloud/debian-9\\\"\\n    }\\n    auto_delete = true\\n  }\\n  network_interface {\\n    subnetwork = google_compute_subnetwork.public-subnetwork.name\\n    access_config {}\\n  }\\n  can_ip_forward = false\\n\\n  metadata = {\\n    block-project-ssh-keys = true\\n    enable-oslogin         = true\\n    serial-port-enable     = false\\n  }\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__instances_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"cd562b76-fbce-4e60-8c75-c9f43d7ffc16\\\"\\n  }\\n}\\n\\nresource \\\"google_compute_disk\\\" \\\"unencrypted_disk\\\" {\\n  name = \\\"terragoat-${var.environment}-disk\\\"\\n  disk_encryption_key {\\n    raw_key = var.disk_encryption_key\\n  }\\n  labels = {\\n    git_commit           = \\\"2bdc0871a5f4505be58244029cc6485d45d7bb8e\\\"\\n    git_file             = \\\"terraform__gcp__instances_tf\\\"\\n    git_last_modified_at = \\\"2022-01-19-17-02-27\\\"\\n    git_last_modified_by = \\\"jameswoolfenden\\\"\\n    git_modifiers        = \\\"jameswoolfenden__nimrodkor\\\"\\n    git_org              = \\\"bridgecrewio\\\"\\n    git_repo             = \\\"terragoat\\\"\\n    yor_trace            = \\\"bf87b7d7-a9d8-4f03-a0d4-8a4cbb647d03\\\"\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 1321,
+            "prompt": 687,
+            "completion": 634,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.125,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+            "expected_ids": "CKV_GCP_32,CKV_GCP_34,CKV_GCP_35,CKV_GCP_36,CKV_GCP_37,CKV_GCP_38,CKV_GCP_39,CKV_GCP_40"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\instances.tf",
+          "expected_ids": "CKV_GCP_32,CKV_GCP_34,CKV_GCP_35,CKV_GCP_36,CKV_GCP_37,CKV_GCP_38,CKV_GCP_39,CKV_GCP_40"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.125,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.125,
+              "reason": "Successfully identified ['CKV_GCP_2'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "5e7eca49-4e28-43f9-8d3a-26dcc1676209",
+        "latencyMs": 2368,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_compute_network\" \"vpc\" {\n  name                    = \"terragoat-${var.environment}-network\"\n  description             = \"Virtual vulnerable-by-design network\"\n  auto_create_subnetworks = false\n}\n\nresource \"google_compute_subnetwork\" \"public-subnetwork\" {\n  name          = \"terragoat-${var.environment}-public-subnetwork\"\n  ip_cidr_range = \"10.0.0.0/24\"\n  region        = var.region\n  network       = google_compute_network.vpc.id\n\n  secondary_ip_range {\n    range_name    = \"tf-test-secondary-range-update1\"\n    ip_cidr_range = \"192.168.10.0/24\"\n  }\n}\n\nresource \"google_compute_firewall\" \"allow_all\" {\n  name          = \"terragoat-${var.environment}-firewall\"\n  network       = google_compute_network.vpc.id\n  source_ranges = [\"0.0.0.0/0\"]\n  allow {\n    protocol = \"tcp\"\n    ports    = [\"0-65535\"]\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.4-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_2\", \"CKV_GCP_4\"],\n  \"remediation_code\": \"resource \\\"google_compute_network\\\" \\\"vpc\\\" {\\n  name                    = \\\"terragoat-${var.environment}-network\\\"\\n  description             = \\\"Virtual network with restricted access\\\"\\n  auto_create_subnetworks = false\\n}\\n\\nresource \\\"google_compute_subnetwork\\\" \\\"public-subnetwork\\\" {\\n  name          = \\\"terragoat-${var.environment}-public-subnetwork\\\"\\n  ip_cidr_range = \\\"10.0.0.0/24\\\"\\n  region        = var.region\\n  network       = google_compute_network.vpc.id\\n\\n  secondary_ip_range {\\n    range_name    = \\\"tf-test-secondary-range-update1\\\"\\n    ip_cidr_range = \\\"192.168.10.0/24\\\"\\n  }\\n}\\n\\nresource \\\"google_compute_firewall\\\" \\\"allow_restricted\\\" {\\n  name    = \\\"terragoat-${var.environment}-firewall\\\"\\n  network = google_compute_network.vpc.id\\n\\n  source_ranges = [\\\"10.0.0.0/24\\\"]\\n\\n  allow {\\n    protocol = \\\"tcp\\\"\\n    ports    = [\\\"22\\\", \\\"443\\\"]\\n  }\\n}\\n\"\n}",
+          "tokenUsage": {
+            "total": 669,
+            "prompt": 381,
+            "completion": 288,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.125,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+            "expected_ids": "CKV_GCP_106,CKV_GCP_2,CKV_GCP_26,CKV_GCP_3,CKV_GCP_74,CKV_GCP_75,CKV_GCP_77,CKV_GCP_88"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+          "expected_ids": "CKV_GCP_106,CKV_GCP_2,CKV_GCP_26,CKV_GCP_3,CKV_GCP_74,CKV_GCP_75,CKV_GCP_77,CKV_GCP_88"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.25,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Successfully identified ['CKV_GCP_2', 'CKV_GCP_26'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "3a6bd15c-9178-4c46-83ed-c876b2ed3c99",
+        "latencyMs": 3706,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_compute_network\" \"vpc\" {\n  name                    = \"terragoat-${var.environment}-network\"\n  description             = \"Virtual vulnerable-by-design network\"\n  auto_create_subnetworks = false\n}\n\nresource \"google_compute_subnetwork\" \"public-subnetwork\" {\n  name          = \"terragoat-${var.environment}-public-subnetwork\"\n  ip_cidr_range = \"10.0.0.0/24\"\n  region        = var.region\n  network       = google_compute_network.vpc.id\n\n  secondary_ip_range {\n    range_name    = \"tf-test-secondary-range-update1\"\n    ip_cidr_range = \"192.168.10.0/24\"\n  }\n}\n\nresource \"google_compute_firewall\" \"allow_all\" {\n  name          = \"terragoat-${var.environment}-firewall\"\n  network       = google_compute_network.vpc.id\n  source_ranges = [\"0.0.0.0/0\"]\n  allow {\n    protocol = \"tcp\"\n    ports    = [\"0-65535\"]\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:google/gemini-3-flash-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\n    \"CKV_GCP_2\",\n    \"CKV_GCP_26\",\n    \"CKV_GCP_73\"\n  ],\n  \"remediation_code\": \"resource \\\"google_compute_network\\\" \\\"vpc\\\" {\\n  name                    = \\\"terragoat-${var.environment}-network\\\"\\n  description             = \\\"Virtual vulnerable-by-design network\\\"\\n  auto_create_subnetworks = false\\n}\\n\\nresource \\\"google_compute_subnetwork\\\" \\\"public-subnetwork\\\" {\\n  name                     = \\\"terragoat-${var.environment}-public-subnetwork\\\"\\n  ip_cidr_range            = \\\"10.0.0.0/24\\\"\\n  region                   = var.region\\n  network                  = google_compute_network.vpc.id\\n  private_ip_google_access = true\\n\\n  log_config {\\n    aggregation_interval = \\\"INTERVAL_5_SEC\\\"\\n    flow_sampling        = 0.5\\n    metadata             = \\\"INCLUDE_ALL_METADATA\\\"\\n  }\\n\\n  secondary_ip_range {\\n    range_name    = \\\"tf-test-secondary-range-update1\\\"\\n    ip_cidr_range = \\\"192.168.10.0/24\\\"\\n  }\\n}\\n\\nresource \\\"google_compute_firewall\\\" \\\"allow_all\\\" {\\n  name    = \\\"terragoat-${var.environment}-firewall\\\"\\n  network = google_compute_network.vpc.id\\n  \\n  # Restrict source ranges to specific internal IPs or known management IPs\\n  source_ranges = [\\\"10.0.0.0/8\\\"]\\n\\n  allow {\\n    protocol = \\\"tcp\\\"\\n    # Restrict to specific required ports only\\n    ports    = [\\\"443\\\"]\\n  }\\n}\"\n}",
+          "tokenUsage": {
+            "total": 898,
+            "prompt": 453,
+            "completion": 445,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.25,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+            "expected_ids": "CKV_GCP_106,CKV_GCP_2,CKV_GCP_26,CKV_GCP_3,CKV_GCP_74,CKV_GCP_75,CKV_GCP_77,CKV_GCP_88"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+          "expected_ids": "CKV_GCP_106,CKV_GCP_2,CKV_GCP_26,CKV_GCP_3,CKV_GCP_74,CKV_GCP_75,CKV_GCP_77,CKV_GCP_88"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.25,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Successfully identified ['CKV_GCP_2', 'CKV_GCP_3'] and generated valid HCL remediation",
+              "assertion": {
+                "type": "python",
+                "value": "file://validate_output.py"
+              }
+            }
+          ]
+        },
+        "id": "4d555f7d-72c8-4709-918a-ce949952d605",
+        "latencyMs": 25093,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\nresource \"google_compute_network\" \"vpc\" {\n  name                    = \"terragoat-${var.environment}-network\"\n  description             = \"Virtual vulnerable-by-design network\"\n  auto_create_subnetworks = false\n}\n\nresource \"google_compute_subnetwork\" \"public-subnetwork\" {\n  name          = \"terragoat-${var.environment}-public-subnetwork\"\n  ip_cidr_range = \"10.0.0.0/24\"\n  region        = var.region\n  network       = google_compute_network.vpc.id\n\n  secondary_ip_range {\n    range_name    = \"tf-test-secondary-range-update1\"\n    ip_cidr_range = \"192.168.10.0/24\"\n  }\n}\n\nresource \"google_compute_firewall\" \"allow_all\" {\n  name          = \"terragoat-${var.environment}-firewall\"\n  network       = google_compute_network.vpc.id\n  source_ranges = [\"0.0.0.0/0\"]\n  allow {\n    protocol = \"tcp\"\n    ports    = [\"0-65535\"]\n  }\n}\n",
+          "label": "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n",
+          "config": {}
+        },
+        "promptId": "94d037dbaaf3ed24af1a9546ad94efdc0720cf98390606047d28dfac9ddf4e86",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:deepseek/deepseek-chat-v3.1",
+          "label": ""
+        },
+        "response": {
+          "output": "{\n  \"vulnerabilities\": [\"CKV_GCP_2\", \"CKV_GCP_3\", \"CKV_GCP_260\"],\n  \"remediation_code\": \"resource \\\"google_compute_network\\\" \\\"vpc\\\" {\\n  name                    = \\\"terragoat-${var.environment}-network\\\"\\n  description             = \\\"Virtual vulnerable-by-design network\\\"\\n  auto_create_subnetworks = false\\n}\\n\\nresource \\\"google_compute_subnetwork\\\" \\\"public-subnetwork\\\" {\\n  name          = \\\"terragoat-${var.environment}-public-subnetwork\\\"\\n  ip_cidr_range = \\\"10.0.0.0/24\\\"\\n  region        = var.region\\n  network       = google_compute_network.vpc.id\\n\\n  secondary_ip_range {\\n    range_name    = \\\"tf-test-secondary-range-update1\\\"\\n    ip_cidr_range = \\\"192.168.10.0/24\\\"\\n  }\\n}\\n\\nresource \\\"google_compute_firewall\\\" \\\"allow_all\\\" {\\n  name          = \\\"terragoat-${var.environment}-firewall\\\"\\n  network       = google_compute_network.vpc.id\\n  source_ranges = [\\\"10.0.0.0/24\\\"]\\n  allow {\\n    protocol = \\\"tcp\\\"\\n    ports    = [\\\"80\\\", \\\"443\\\"]\\n  }\\n  target_tags = [\\\"web-server\\\"]\\n}\"\n}",
+          "tokenUsage": {
+            "total": 737,
+            "prompt": 406,
+            "completion": 331,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop"
+        },
+        "score": 0.25,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+            "expected_ids": "CKV_GCP_106,CKV_GCP_2,CKV_GCP_26,CKV_GCP_3,CKV_GCP_74,CKV_GCP_75,CKV_GCP_77,CKV_GCP_88"
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://validate_output.py"
+            }
+          ],
+          "options": {},
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "terraform_code": "file://terragoat\\terraform\\gcp\\networks.tf",
+          "expected_ids": "CKV_GCP_106,CKV_GCP_2,CKV_GCP_26,CKV_GCP_3,CKV_GCP_74,CKV_GCP_75,CKV_GCP_77,CKV_GCP_88"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 13,
+      "failures": 2,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 7390,
+        "completion": 6752,
+        "cached": 0,
+        "total": 14142,
+        "numRequests": 15,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      },
+      "durationMs": 112746,
+      "evaluationDurationMs": 112746
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Terraform Vulnerability Detection Benchmark - Medium Mode",
+    "prompts": [
+      "You are a cloud security expert analyzing Infrastructure as Code.\nYour task is to review the following Terraform code and identify any security misconfigurations.\n\nYou must find AT LEAST ONE valid Checkov vulnerability ID (e.g. CKV_AWS_20) that applies to the code. Finding more will increase your score.\nYou must also provide syntactically valid Terraform HCL code that remediates the issue.\n\nYou MUST output your findings strictly in the following JSON format. Do not add any text before or after the JSON block:\n{\n  \"vulnerabilities\": [\"CKV_AWS_123\", \"...\"],\n  \"remediation_code\": \"resource \\\"aws_s3_bucket\\\" {\\n  # valid HCL fix\\n}\"\n}\n\nTerraform Code:\n{{terraform_code}}\n"
+    ],
+    "providers": [
+      {
+        "id": "openrouter:openai/gpt-5.4-mini",
+        "config": {
+          "timeout": 30000
+        }
+      },
+      {
+        "id": "openrouter:google/gemini-3-flash-preview",
+        "config": {
+          "timeout": 30000
+        }
+      },
+      {
+        "id": "openrouter:deepseek/deepseek-chat-v3.1",
+        "config": {
+          "timeout": 60000
+        }
+      }
+    ],
+    "tests": "tests_medium_gcp.csv",
+    "scenarios": [],
+    "env": {},
+    "defaultTest": {
+      "assert": [
+        {
+          "type": "python",
+          "value": "file://validate_output.py"
+        }
+      ],
+      "vars": {},
+      "options": {},
+      "metadata": {}
+    },
+    "outputPath": [
+      "results_medium_gcp.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.3",
+    "nodeVersion": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "exportedAt": "2026-04-08T20:51:19.270Z",
+    "evaluationCreatedAt": "2026-04-08T20:49:25.867Z"
+  }
+}
